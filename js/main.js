@@ -65,6 +65,34 @@ $(document).ready(function () {
         $(".mo-dropdown").toggleClass("open");
     });
     ////////////////////////////////
+    $('.top-cats').owlCarousel({
+        items: 6,
+        margin: 15,
+        autoplay: true,
+        rtl: document.dir == 'rtl' ? true : false,
+        loop: true,
+        dots: true,
+        nav: true,
+        navText: ["<i class='fas fa-chevron-right'></i>", "<i class='fas fa-chevron-left'></i>"],
+        responsive: {
+            0: {
+                items: 2,
+            },
+            480: {
+                items: 3,
+            },
+            767: {
+                items: 4,
+            },
+            991: {
+                items: 5,
+            },
+            1220: {
+                items: 6
+            }
+        }
+    });
+    ////////////////////////////
     if ($(window).width() <= 767) {
         $(".famous-stores .stores").addClass("owl-carousel");
         $('.famous-stores .stores').owlCarousel({
