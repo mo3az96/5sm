@@ -1559,6 +1559,7 @@ header ._2nd-sec {
 
 .all-cats .cat-item {
   width: 100%;
+  margin-bottom: 30px;
 }
 .all-cats .cat-item .cat-icon {
   width: 100%;
