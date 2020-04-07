@@ -1,9 +1,9 @@
 $(window).on("load", function () {
-    // $('body,html').scrollTop(0)
-    // $(".preloader").fadeOut(500, function () {
-    //     $('body').css("overflow", "visible");
-    //     $(this).remove();
-    // });
+    $('body,html').scrollTop(0)
+    $(".preloader").fadeOut(500, function () {
+        $('body').css("overflow", "visible");
+        $(this).remove();
+    });
 });
 $(document).ready(function () {
     new WOW().init();
