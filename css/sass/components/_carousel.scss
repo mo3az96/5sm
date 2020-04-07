@@ -148,6 +148,22 @@
     }
 }
 
+.offers-page {
+    .offers-slider {
+        .owl-nav {
+            display: none;
+        }
+
+        .owl-dots {
+            display: none;
+
+            @include xs {
+                display: flex;
+            }
+        }
+    }
+}
+
 .stores {
     .owl-dots {
         display: flex;

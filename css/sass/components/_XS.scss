@@ -17,7 +17,7 @@ header {
                 -o-clip-path: circle(30px at 37px 44px);
                 z-index: 999;
                 visibility: hidden;
-                overflow-y: auto;
+                overflow-y: scroll;
 
                 .mo-navbar {
                     flex-direction: column;

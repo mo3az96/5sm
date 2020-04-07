@@ -66,3 +66,14 @@
         margin: 40px 0 0;
     }
 }
+
+.all-sec {
+    background-color: $back;
+    margin-top: 70px;
+    padding: 70px 0 50px;
+
+    @include xs {
+        margin-top: 50px;
+        padding: 30px 0;
+    }
+}

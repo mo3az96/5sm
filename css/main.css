@@ -58,6 +58,18 @@
   }
 }
 
+.all-sec {
+  background-color: #fafafa;
+  margin-top: 70px;
+  padding: 70px 0 50px;
+}
+@media (max-width: 767px) {
+  .all-sec {
+    margin-top: 50px;
+    padding: 30px 0;
+  }
+}
+
 body {
   position: relative;
   font-family: tajwal;
@@ -595,6 +607,18 @@ html {
   color: #ff9436;
 }
 
+.offers-page .offers-slider .owl-nav {
+  display: none;
+}
+.offers-page .offers-slider .owl-dots {
+  display: none;
+}
+@media (max-width: 767px) {
+  .offers-page .offers-slider .owl-dots {
+    display: flex;
+  }
+}
+
 .stores .owl-dots {
   display: flex;
   align-items: center;
@@ -1128,18 +1152,6 @@ header ._2nd-sec {
   color: #ff9436;
 }
 
-.all-cats {
-  background-color: #fafafa;
-  margin-top: 70px;
-  padding: 70px 0 50px;
-}
-@media (max-width: 767px) {
-  .all-cats {
-    margin-top: 50px;
-    padding: 30px 0;
-  }
-}
-
 .top-stores .store {
   margin-top: 10px;
 }
@@ -1205,18 +1217,6 @@ header ._2nd-sec {
   color: #ff9436;
 }
 
-.all-stores {
-  background-color: #fafafa;
-  margin-top: 70px;
-  padding: 70px 0 50px;
-}
-@media (max-width: 767px) {
-  .all-stores {
-    margin-top: 50px;
-    padding: 30px 0;
-  }
-}
-
 .mo-paging {
   display: flex;
   align-items: center;
@@ -1254,6 +1254,10 @@ header ._2nd-sec {
   background-color: #ffad35;
   color: #fff;
   pointer-events: none;
+}
+
+.all-sec .item {
+  margin-bottom: 30px;
 }
 
 .sec-header {
@@ -1795,7 +1799,7 @@ footer {
     -o-clip-path: circle(30px at 37px 44px);
     z-index: 999;
     visibility: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
   header .header ._2nd-sec .mo-navbar {
     flex-direction: column;
