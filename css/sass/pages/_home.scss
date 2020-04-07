@@ -54,10 +54,12 @@
     border-right: 3px solid $orange;
     margin-top: 70px;
     padding: 40px;
+    margin-bottom: 60px;
 
     @include xs {
         padding: 15px;
         margin-top: 40px;
+        margin-bottom: 40px;
     }
 }
 

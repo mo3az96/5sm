@@ -1,4 +1,10 @@
 .about-page {
+    margin-bottom: 70px;
+
+    @include xs {
+        margin-bottom: 40px;
+    }
+
     .about-img {
         width: 100%;
 

@@ -51,11 +51,10 @@
 
 .page-content {
   margin-top: 60px;
-  margin-bottom: 50px;
 }
 @media (max-width: 767px) {
   .page-content {
-    margin: 40px 0 30px;
+    margin: 40px 0 0;
   }
 }
 
@@ -842,11 +841,13 @@ header ._2nd-sec {
   border-right: 3px solid #ffad35;
   margin-top: 70px;
   padding: 40px;
+  margin-bottom: 60px;
 }
 @media (max-width: 767px) {
   .about-sec {
     padding: 15px;
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -856,6 +857,14 @@ header ._2nd-sec {
   text-align: justify;
 }
 
+.about-page {
+  margin-bottom: 70px;
+}
+@media (max-width: 767px) {
+  .about-page {
+    margin-bottom: 40px;
+  }
+}
 .about-page .about-img {
   width: 100%;
 }
@@ -891,10 +900,12 @@ header ._2nd-sec {
 .contact-form {
   padding-left: 10px;
   width: 100%;
+  margin-bottom: 70px;
 }
 @media (max-width: 767px) {
   .contact-form {
     padding: 0;
+    margin-bottom: 40px;
   }
 }
 .contact-form .form-row {
@@ -1120,13 +1131,129 @@ header ._2nd-sec {
 .all-cats {
   background-color: #fafafa;
   margin-top: 70px;
-  padding: 70px 0;
+  padding: 70px 0 50px;
 }
 @media (max-width: 767px) {
   .all-cats {
     margin-top: 50px;
     padding: 30px 0;
   }
+}
+
+.top-stores .store {
+  margin-top: 10px;
+}
+.top-stores .owl-dots {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .top-stores .owl-dots {
+    display: flex;
+  }
+}
+.top-stores .owl-dots .owl-dot {
+  background: rgba(0, 0, 0, 0.3);
+  outline: none;
+  border: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 4px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.top-stores .owl-dots .owl-dot.active {
+  background: #ff9436;
+  pointer-events: none;
+}
+.top-stores .owl-dots .owl-dot:hover {
+  background: #ff9436;
+}
+.top-stores .owl-nav {
+  width: 0;
+  height: 0;
+}
+@media (max-width: 992px) {
+  .top-stores .owl-nav {
+    display: none;
+  }
+}
+.top-stores .owl-nav button[class^=owl-] {
+  position: absolute;
+  top: 67px;
+  outline: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.top-stores .owl-nav button[class^=owl-].owl-next {
+  left: -40px;
+}
+.top-stores .owl-nav button[class^=owl-].owl-prev {
+  right: -40px;
+}
+.top-stores .owl-nav button[class^=owl-]:hover {
+  color: #ff9436;
+}
+
+.all-stores {
+  background-color: #fafafa;
+  margin-top: 70px;
+  padding: 70px 0 50px;
+}
+@media (max-width: 767px) {
+  .all-stores {
+    margin-top: 50px;
+    padding: 30px 0;
+  }
+}
+
+.mo-paging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 47px;
+  flex-wrap: wrap;
+}
+
+.page-num {
+  margin-bottom: 12px;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  color: #4d4d4d;
+  font-family: med;
+  margin: 0 2px;
+  border-radius: 18px;
+  border: 1px solid #ededed;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  line-height: 36px;
+  background-color: #fff;
+}
+.page-num:hover, .page-num:focus {
+  border-color: #ffad35;
+  color: #ffad35;
+}
+.page-num:first-of-type {
+  width: 110px;
+}
+.page-num.active {
+  background-color: #ffad35;
+  color: #fff;
+  pointer-events: none;
 }
 
 .sec-header {
@@ -1180,7 +1307,12 @@ header ._2nd-sec {
 .stores {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+.stores .store {
+  margin-left: 11px;
+}
+.stores .store:nth-of-type(7n) {
+  margin-left: 0;
 }
 
 .store {
@@ -1193,7 +1325,6 @@ header ._2nd-sec {
   justify-content: center;
   border-radius: 50%;
   backface-visibility: hidden;
-  margin: auto;
   margin-bottom: 30px;
   overflow: hidden;
   -moz-transition: all 0.3s ease-in-out;
@@ -1567,7 +1698,6 @@ header ._2nd-sec {
 }
 
 footer {
-  margin-top: 60px;
   padding-top: 65px;
   background-color: #4d4d4d;
 }

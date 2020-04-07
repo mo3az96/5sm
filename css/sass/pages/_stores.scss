@@ -1,4 +1,8 @@
-.top-cats {
+.top-stores {
+    .store {
+        margin-top: 10px;
+    }
+
     .owl-dots {
         display: none;
 
@@ -8,7 +12,6 @@
 
         align-items: center;
         justify-content: center;
-        margin-top: 25px;
 
         .owl-dot {
             background: rgba(#000, 0.3);
@@ -42,7 +45,7 @@
 
         button[class^=owl-] {
             position: absolute;
-            top: 75px;
+            top: 67px;
             outline: none;
             border: none;
             color: rgba(#000, 0.4);
@@ -64,7 +67,7 @@
     }
 }
 
-.all-cats {
+.all-stores {
     background-color: $back;
     margin-top: 70px;
     padding: 70px 0 50px;
@@ -72,5 +75,45 @@
     @include xs {
         margin-top: 50px;
         padding: 30px 0;
+    }
+}
+
+.mo-paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 47px;
+    flex-wrap: wrap;
+}
+
+.page-num {
+    margin-bottom: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    color: $text;
+    font-family: med;
+    margin: 0 2px;
+    border-radius: 18px;
+    border: 1px solid $border;
+    @include transition(all 0.3s ease-in-out);
+    text-align: center;
+    line-height: 36px;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+        border-color: $orange;
+        color: $orange;
+    }
+
+    &:first-of-type {
+        width: 110px;
+    }
+
+    &.active {
+        background-color: $orange;
+        color: #fff;
+        pointer-events: none;
     }
 }
