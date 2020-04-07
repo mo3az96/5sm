@@ -108,13 +108,6 @@ $(document).ready(function () {
             menu.classList.remove('active');
         }
     })
-
-    // if ($(window).width() < 992) {
-    //     $('.nav-link,.mobile-cont').click(function () {
-    //         $('.nav-sec-cont').removeClass("active")
-    //         $('body,html').toggleClass("overfollow-fix")
-    //     });
-    // }
     $('.nav-tgl').click(function () {
         $('body,html').toggleClass("overflow")
     });

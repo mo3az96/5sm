@@ -61,16 +61,7 @@
     }
 }
 
-.about-head {
-    color: $text;
-    font-size: 24px;
-    font-family: bold;
-    margin-bottom: 20px;
 
-    @include xs {
-        text-align: center;
-    }
-}
 
 .about-text {
     font-size: 16px;

@@ -1,0 +1,36 @@
+.about-page {
+    .about-img {
+        width: 100%;
+
+        &.xs-img {
+            display: none;
+
+            @include xs {
+                margin-bottom: 25px;
+                display: block;
+            }
+        }
+
+        &.lg-img {
+            @include xs {
+                display: none;
+            }
+        }
+    }
+
+    .about-text {
+        line-height: 1.5;
+        font-size: 18px;
+        color: $text;
+        margin-bottom: 35px;
+
+        @include xs {
+            margin-bottom: 25px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+}

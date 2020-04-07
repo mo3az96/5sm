@@ -60,6 +60,11 @@
         font-family: bold;
     }
 
+    .tags {
+        display: flex;
+        align-items: center;
+    }
+
     .tag {
         font-size: 13px;
         color: #fff;
@@ -73,6 +78,7 @@
 
         &.valide-tag {
             background-color: $green;
+            margin-right: 5px;
 
             &::before {
                 content: "\f058";

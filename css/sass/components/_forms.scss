@@ -7,7 +7,7 @@
 
     @include xs {
         width: 280px;
-        margin: 50px auto 0;
+        margin: 50px auto;
     }
 }
 
@@ -146,7 +146,7 @@
     @include transition(all 0.3s ease-in-out);
 
     &:hover {
-        border-right: $secorange;
+        background-color: $secorange;
     }
 
     @include xs {
@@ -158,8 +158,51 @@
         }
 
         &:after {
-            content: "\e879";
-            font-family: 'Linearicons-Free';
+            content: "\f060";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+    }
+}
+
+.newlleter-page {
+    background-color: $text;
+    padding: 30px 22px;
+    margin-top: 32px;
+
+    @include xs {
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .newsletter-form {
+        width: 100%;
+
+        .newsletter-input {
+            height: 41px;
+            font-size: 12px;
+            padding: 0 25px;
+        }
+
+        .newsletter-button {
+            width: 105px;
+            height: 32px;
+            font-size: 12px;
+            padding: 0;
+
+            @include xs {
+                width: 32px;
+            }
+        }
+    }
+
+    .main-newsletter-head {
+        color: #fff;
+        font-size: 19px;
+        font-family: bold;
+
+        @include xs {
+            text-align: center;
         }
     }
 }

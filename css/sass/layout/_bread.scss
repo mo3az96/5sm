@@ -1,0 +1,36 @@
+.breadcrumb-sec {
+    .breadcrumb {
+        margin-top: 25px;
+        border-radius: 0;
+        background-color: transparent;
+
+        li {
+            a {
+                font-size: 14px;
+                color: $plaeholder;
+                @include transition(all 0.3s ease-in-out);
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+
+            &::after {
+                margin-right: 12px;
+                margin-left: 14px;
+                color: #b8b8b8;
+                content: "/\00a0";
+                font-size: 14px;
+            }
+
+            &.active {
+                font-size: 14px;
+                color: $plaeholder;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
