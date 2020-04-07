@@ -1,0 +1,150 @@
+.mo-navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 55px;
+}
+
+.nav-li {
+    margin-left: 25px;
+
+    &:last-of-type {
+        margin-left: 0;
+    }
+}
+
+.nav-anchor {
+    font-size: 16px;
+    color: $text;
+    font-family: med;
+
+    &:hover,
+    &:focus {
+        color: $orange;
+
+        &:after {
+            color: $orange;
+        }
+    }
+}
+
+.mo-dropdown {
+
+
+    >.nav-anchor {
+        display: flex;
+        align-items: center;
+
+        @include xs {
+            justify-content: center;
+        }
+
+        &:after {
+            content: "\f078";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 8px;
+            margin-right: 6px;
+            color: $text;
+            @include transition(all 0.3s ease-in-out);
+        }
+
+        &:hover,
+        &:focus {
+            color: $orange;
+
+            &:after {
+                color: $orange;
+            }
+        }
+    }
+
+    &.open {
+        >.nav-anchor {
+            color: $orange;
+
+            &:after {
+                color: $orange;
+            }
+        }
+    }
+}
+
+.mega {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid $back;
+    transition: none;
+    display: none;
+
+    @include xs {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .mega-ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 43px;
+        padding-bottom: 65px;
+
+        @include xs {
+            padding-top: 0;
+            padding-bottom: 0;
+            display: block;
+        }
+    }
+
+    .mega-li {
+        width: 25%;
+        margin-bottom: 34px;
+
+        @include xs {
+            width: 100%;
+            text-align: center;
+            margin: 8px 0;
+        }
+    }
+
+    .mega-anchor {
+        display: inline-flex;
+        align-items: center;
+        font-size: 18px;
+        color: $text;
+
+        @include xs {
+            color: $grey;
+
+            font-family: med;
+
+        }
+
+        i {
+            width: 23px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            margin-left: 24px;
+
+            @include xs {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: $orange;
+
+            i {
+                color: $orange;
+            }
+        }
+    }
+}

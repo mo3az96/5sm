@@ -1,0 +1,179 @@
+.main-slider {
+    margin-top: 20px;
+
+    &:hover {
+        .owl-nav {
+            button[class^=owl-] {
+                transform: scale(1);
+                opacity: 1;
+                visibility: visible;
+
+                &.owl-next {
+                    left: 19px;
+                }
+
+                &.owl-prev {
+                    right: 19px;
+                }
+            }
+        }
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include sm {
+            bottom: 10px;
+        }
+
+        .owl-dot {
+            background: rgba(#000, 0.3);
+            outline: none;
+            border: none;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $secorange;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $secorange;
+            }
+        }
+    }
+
+    .owl-nav {
+        width: 0;
+        height: 0;
+
+        @include sm {
+            display: none;
+        }
+
+        button[class^=owl-] {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: none;
+            color: rgba(#000, 0.4);
+            font-size: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0);
+            @include transition(all 0.3s ease-in-out);
+
+            &.owl-next {
+                left: 50px;
+            }
+
+            &.owl-prev {
+                right: 50px;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.offers-slider {
+    .owl-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+
+        .owl-dot {
+            background: rgba(#000, 0.3);
+            outline: none;
+            border: none;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $secorange;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $secorange;
+            }
+        }
+    }
+
+    .owl-nav {
+        width: 0;
+        height: 0;
+
+        @include sm {
+            display: none;
+        }
+
+        button[class^=owl-] {
+            position: absolute;
+            top: 130px;
+            outline: none;
+            border: none;
+            color: rgba(#000, 0.4);
+            font-size: 20px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.owl-next {
+                left: -40px;
+            }
+
+            &.owl-prev {
+                right: -40px;
+            }
+
+            &:hover {
+                color: $secorange;
+            }
+        }
+    }
+}
+
+.stores {
+    .owl-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+
+        .owl-dot {
+            background: rgba(#000, 0.3);
+            outline: none;
+            border: none;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $secorange;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $secorange;
+            }
+        }
+    }
+}

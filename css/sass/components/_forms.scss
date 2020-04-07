@@ -1,0 +1,165 @@
+.search-cont {
+    position: relative;
+
+    * {
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    @include xs {
+        width: 280px;
+        margin: 50px auto 0;
+    }
+}
+
+.search-input {
+    border: 1px solid $border;
+    border-radius: 20px;
+    background-color: $search-back;
+    color: $text;
+    font-size: 16px;
+    text-align: right;
+    width: 300px;
+    height: 40px;
+    padding-right: 45px;
+    padding-left: 20px;
+
+    &::placeholder {
+        font-size: 14px;
+        color: $plaeholder;
+    }
+
+    &:focus {
+        border-color: $orange;
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.search-button {
+    color: $place-ion;
+    font-size: 15px;
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+        color: $orange;
+    }
+}
+
+
+.news-letter-cont {
+    background-image: url(../images/newsback.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    // min-height: 331px;
+    margin-top: 68px;
+    padding-top: 77px;
+    padding-bottom: 75px;
+    position: relative;
+
+    @include xs {
+        margin-top: 40px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &::before {
+        content: "";
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+.main-newsletter-head {
+    font-size: 36px;
+    font-family: bold;
+    margin-bottom: 20px;
+    position: relative;
+
+    @include xs {
+        font-size: 30px;
+    }
+}
+
+.sub-newsletter-head {
+    font-size: 24px;
+    position: relative;
+
+    @include xs {
+        font-size: 20px;
+    }
+}
+
+.newsletter-form {
+    position: relative;
+    width: 535px;
+    margin: 30px auto 0;
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.newsletter-input {
+    width: 100%;
+    height: 58px;
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 0 33px;
+    font-size: 18px;
+    color: $text;
+    @include transition(all 0.3s ease-in-out);
+
+
+    &::placeholder {
+        color: $grey;
+    }
+
+    &:focus {
+        box-shadow: 0px 0px 25px 0px rgba($text, 0.25);
+    }
+}
+
+.newsletter-button {
+    position: absolute;
+    padding: 0 30px;
+    height: 46px;
+    border-radius: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    font-size: 18px;
+    font-family: bold;
+    color: #fff;
+    background-color: $orange;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        border-right: $secorange;
+    }
+
+    @include xs {
+        padding: 0;
+        width: 46px;
+
+        span {
+            display: none;
+        }
+
+        &:after {
+            content: "\e879";
+            font-family: 'Linearicons-Free';
+        }
+    }
+}
