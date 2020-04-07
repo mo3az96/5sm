@@ -1536,8 +1536,9 @@ header ._2nd-sec {
 }
 @media (max-width: 767px) {
   .cat-item .cat-icon {
-    width: 150px;
-    height: 150px;
+    width: 165px;
+    height: 165px;
+    margin: auto;
   }
 }
 .cat-item .cat-name {
