@@ -115,7 +115,7 @@ $(document).ready(function () {
     //         $('body,html').toggleClass("overfollow-fix")
     //     });
     // }
-    // $('.nav-tgl').click(function () {
-    //     $('body,html').toggleClass("overfollow-fix")
-    // });
+    $('.nav-tgl').click(function () {
+        $('body,html').toggleClass("overflow")
+    });
 });
