@@ -12,6 +12,16 @@ $(document).ready(function () {
     } else {
         $(".fixed-header").removeClass("scroll");
     }
+    $('a[data-scroll]').click(function (e) {
+        e.preventDefault();
+        //Set Offset Distance from top to account for fixed nav
+        var target = ('#' + $(this).data('scroll'));
+        var $target = $(target);
+        //Animate the scroll to, include easing lib if you want more fancypants easings
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 100
+        }, 1000, 'swing');
+    });
     $(window).scroll(function () {
         if ($(this).scrollTop() >= 40) {
             $(".fixed-header").addClass("scroll");
@@ -134,6 +144,9 @@ $(document).ready(function () {
             nav: false,
         });
         $(".half-item .item").unwrap();
+
+        $(".related").addClass("famous-blog");
+        $(".famous-blog").removeClass("related");
         $(".famous-blog").addClass("owl-carousel");
         $('.famous-blog').owlCarousel({
             items: 1,

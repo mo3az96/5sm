@@ -1,0 +1,353 @@
+.owner-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 19px;
+
+    @include xs {
+        flex-direction: column;
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+
+
+
+    span {
+        margin: 0 6px;
+        font-size: 14px;
+        color: $text;
+    }
+
+    .user-name {
+        font-size: 14px;
+        color: #0e87f0;
+        transition: 0.3s;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+.user-img {
+    min-width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 6px;
+}
+
+.date-div {
+    display: flex;
+    font-size: 14px;
+    color: $grey;
+
+    @include xs {
+        margin-top: 7px;
+    }
+
+    &::before {
+        content: "-";
+        margin: 0 6px;
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    span {
+        margin-left: 6px;
+    }
+}
+
+.post-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    @include xs {
+        flex-direction: column;
+    }
+}
+
+.share-with {
+    display: flex;
+    align-items: center;
+
+    @include xs {
+        margin-bottom: 15px;
+    }
+}
+
+.title {
+    font-size: 15px;
+    color: $text;
+    margin-left: 6px;
+}
+
+.share-methods {
+    display: flex;
+}
+
+.share-method {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+    border-radius: 50%;
+    margin: 0 3px;
+
+    &:nth-of-type(1) {
+        background-color: #43bceb;
+    }
+
+    &:nth-of-type(2) {
+        background-color: #4268b3;
+    }
+
+    &:nth-of-type(3) {
+        background-color: #0dc143;
+    }
+
+    &:nth-of-type(4) {
+        background-color: #36aee2;
+    }
+
+    &:nth-of-type(5) {
+        background-color: #e42b33;
+    }
+
+    &:nth-of-type(6) {
+        background-color: #0177b5;
+    }
+
+    &:hover {
+        background-color: $secorange;
+        color: #fff;
+    }
+}
+
+.right-link {
+    font-size: 15px;
+    color: $grey;
+    transition: 0.3s;
+
+    i {
+        font-size: 18px;
+    }
+
+    &.comments-link {
+        margin-left: 9px;
+    }
+
+    &:hover {
+        color: $text;
+    }
+}
+
+.post-desc {
+    margin-top: 30px;
+
+    .about-text {
+        text-align: justify;
+        line-height: 1.5;
+        font-size: 18px;
+        color: $text;
+        margin-bottom: 30px;
+
+        @include xs {
+            margin-bottom: 20px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .sec-head {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .post-img {
+        margin: 0 auto 25px;
+        text-align: center;
+    }
+}
+
+.buy {
+    margin-top: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $border;
+}
+
+.buy-store {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+
+    @include xs {
+        flex-direction: column;
+    }
+
+    &:nth-of-type(odd) {
+        background-color: $back;
+    }
+
+    .store {
+        width: 70px;
+        height: 70px;
+        margin: 0;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+
+    .code {
+        width: 219px;
+
+        @include xs {
+            margin: 15px auto !important;
+        }
+    }
+
+    .right-div {
+        display: flex;
+        align-items: center;
+    }
+
+    .offer-name {
+        font-size: 17px;
+        color: $text;
+        margin: 0 16px;
+    }
+}
+
+.writen-post {
+    margin-top: 25px;
+    font-size: 17px;
+    color: $grey;
+    margin-bottom: 80px;
+
+    @include xs {
+        margin-bottom: 40px;
+        text-align: justify;
+    }
+
+    .fixall {
+        color: #0e87f0;
+        transition: 0.3s;
+
+        &:hover,
+        &:focus {
+            color: $orange;
+        }
+    }
+}
+
+.single-post {
+    @include xs {
+        margin-bottom: 30px;
+    }
+}
+
+.related {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $border;
+
+    .item {
+        width: calc(50% - 15px);
+        margin-left: 30px;
+        margin-bottom: 10px;
+
+        &:nth-of-type(2n) {
+            margin-left: 0;
+        }
+
+        .item-name {
+            font-size: 17px;
+            font-family: bold;
+        }
+
+        .item-desc {
+            padding-top: 20px;
+        }
+    }
+}
+
+.comments {
+    margin-top: 30px;
+
+    @include xs {
+        margin-top: 50px;
+    }
+
+    .show-all {
+        margin-top: 30px;
+    }
+}
+
+.comment {
+    display: flex;
+    border-bottom: 1px solid $back;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .user-name {
+        font-size: 16px;
+        color: $text;
+        font-family: bold;
+    }
+
+    .comment-info {
+        margin-top: 10px;
+        padding-right: 10px;
+
+        @include xs {
+            flex-direction: column;
+            display: flex;
+        }
+    }
+
+    .user-date {
+        font-size: 14px;
+        color: $grey;
+
+        &::before {
+            content: "-";
+            margin: 0 9px;
+
+            @include xs {
+                display: none;
+            }
+        }
+    }
+
+    .comment-text {
+        font-size: 16px;
+        color: $text;
+        margin-top: 13px;
+    }
+}
+
+.leave-comment {
+    margin-top: 50px;
+}

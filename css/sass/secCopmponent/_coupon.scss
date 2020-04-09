@@ -98,97 +98,6 @@
         }
     }
 
-    .code {
-        height: 36px;
-        border: 1px dashed $secorange;
-        display: flex;
-        border-radius: 18px;
-        align-items: center;
-        padding: 0 28px;
-        margin-top: 14px;
-        font-size: 17px;
-        color: $text;
-        position: relative;
-
-        .code-cover {
-            position: absolute;
-            left: -1px;
-            background-color: $orange;
-            top: -1px;
-            bottom: -1px;
-            border-radius: 20px;
-            width: 70%;
-            display: flex;
-            align-items: center;
-            padding-right: 29px;
-            font-size: 16px;
-            color: #fff;
-            font-family: bold;
-        }
-
-        &:hover {
-            border-color: $orange;
-
-            .code-cover {
-                background-color: $secorange;
-            }
-
-            .mo-tool-tip {
-                transform: translateX(-50%) translateY(-5px);
-                visibility: visible;
-                opacity: 1;
-            }
-        }
-
-        .mo-tool-tip {
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(25px);
-            font-size: 12px;
-            font-family: med;
-            color: #fff;
-            width: 164px;
-            background-color: rgba(0, 0, 0, 0.8);
-            height: 24px;
-            border-radius: 12px;
-            text-align: center;
-            line-height: 24px;
-            visibility: hidden;
-            opacity: 0;
-
-            &:after {
-                position: absolute;
-                content: "";
-                top: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                font-size: 15px;
-                color: rgba(0, 0, 0, 0.8);
-                border: solid transparent;
-                position: absolute;
-                pointer-events: none;
-                border-color: rgba(239, 108, 0, 0);
-                border-top-color: rgba(0, 0, 0, 0.8);
-                border-width: 5px;
-            }
-        }
-
-        &.show-offer {
-            background-color: $orange;
-            font-size: 16px;
-            color: #fff;
-            font-family: bold;
-            border: none;
-            width: 171px;
-            margin-right: auto;
-
-            &:hover {
-                background-color: $secorange;
-            }
-        }
-
-    }
 
     .cop-div-desc {
         padding: 0 10px;
@@ -222,4 +131,113 @@
             color: $text;
         }
     }
+}
+
+.code {
+    height: 36px;
+    border: 1px dashed $secorange;
+    display: flex;
+    border-radius: 18px;
+    align-items: center;
+    padding: 0 28px;
+    margin-top: 14px;
+    font-size: 17px;
+    color: $text;
+    position: relative;
+    @include transition(all 0.3s ease-in-out);
+
+    .code-cover {
+        position: absolute;
+        left: -1px;
+        background-color: $orange;
+        top: -1px;
+        bottom: -1px;
+        border-radius: 20px;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        padding-right: 29px;
+        font-size: 16px;
+        color: #fff;
+        font-family: bold;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    &:hover {
+        border-color: $orange;
+
+        .code-cover {
+            background-color: $secorange;
+        }
+
+        .mo-tool-tip {
+            transform: translateX(-50%) translateY(-5px);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .mo-tool-tip {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(25px);
+        font-size: 12px;
+        font-family: med;
+        color: #fff;
+        width: 164px;
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 24px;
+        border-radius: 12px;
+        text-align: center;
+        line-height: 24px;
+        visibility: hidden;
+        @include transition(all 0.3s ease-in-out);
+        opacity: 0;
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.8);
+            border: solid transparent;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(239, 108, 0, 0);
+            border-top-color: rgba(0, 0, 0, 0.8);
+            border-width: 5px;
+        }
+    }
+
+    &.show-offer {
+        background-color: $orange;
+        font-size: 16px;
+        color: #fff;
+        font-family: bold;
+        border: none;
+        width: 171px;
+        margin-right: auto;
+
+        &:hover {
+            background-color: $secorange;
+        }
+    }
+
+    &.show-buy {
+        background-color: $green;
+        font-size: 16px;
+        color: #fff;
+        font-family: bold;
+        border: none;
+        width: 204px;
+        margin-right: auto;
+
+        &:hover {
+            background-color: $orange;
+        }
+    }
+
 }

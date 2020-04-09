@@ -1,3 +1,54 @@
+.imgs {
+    position: relative;
+
+    .item-img {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+
+        img {
+            width: 100%;
+            backface-visibility: hidden;
+        }
+    }
+
+    .cat {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        height: 28px;
+        color: #fff;
+        border-radius: 14px;
+        padding: 0 20px;
+        transition: 0.3s;
+        z-index: 9;
+
+        &.per {
+            background-color: $orange;
+        }
+
+        &.teach {
+            background-color: $baby;
+        }
+
+        &.elec {
+            background-color: $brown;
+        }
+
+        &.apps {
+            background-color: #7e86ff;
+        }
+
+        &.smarts {
+            background-color: #55c95b;
+        }
+
+        &:hover {
+            background-color: $orange;
+        }
+    }
+}
+
 .item {
     margin: auto;
 
@@ -5,18 +56,7 @@
         @include transition(all 0.3s ease-in-out);
     }
 
-    .imgs {
-        position: relative;
 
-        .item-img {
-            display: flex;
-            overflow: hidden;
-
-            img {
-                backface-visibility: hidden;
-            }
-        }
-    }
 
     .store {
         width: 70px;
@@ -70,41 +110,7 @@
         margin-right: 7px;
     }
 
-    .cat {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        height: 28px;
-        color: #fff;
-        border-radius: 14px;
-        padding: 0 20px;
 
-        z-index: 9;
-
-        &.per {
-            background-color: $orange;
-        }
-
-        &.teach {
-            background-color: $baby;
-        }
-
-        &.elec {
-            background-color: $brown;
-        }
-
-        &.apps {
-            background-color: #7e86ff;
-        }
-
-        &.smarts {
-            background-color: #55c95b;
-        }
-
-        &:hover {
-            background-color: $orange;
-        }
-    }
 
     .item-text {
         font-size: 15px;
