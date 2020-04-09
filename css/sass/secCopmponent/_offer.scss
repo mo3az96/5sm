@@ -11,6 +11,10 @@
         .item-img {
             display: flex;
             overflow: hidden;
+
+            img {
+                backface-visibility: hidden;
+            }
         }
     }
 
@@ -75,6 +79,8 @@
         border-radius: 14px;
         padding: 0 20px;
 
+        z-index: 9;
+
         &.per {
             background-color: $orange;
         }
@@ -86,10 +92,30 @@
         &.elec {
             background-color: $brown;
         }
+
+        &.apps {
+            background-color: #7e86ff;
+        }
+
+        &.smarts {
+            background-color: #55c95b;
+        }
+
+        &:hover {
+            background-color: $orange;
+        }
     }
 
     .item-text {
         font-size: 15px;
+    }
+
+    &:hover {
+        .item-img {
+            img {
+                transform: scale(1.05);
+            }
+        }
     }
 }
 

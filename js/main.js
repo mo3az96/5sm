@@ -121,10 +121,22 @@ $(document).ready(function () {
         }
     });
     ////////////////////////////
+
     if ($(window).width() <= 767) {
         $(".famous-stores .stores").addClass("owl-carousel");
         $('.famous-stores .stores').owlCarousel({
             items: 2,
+            margin: 15,
+            autoplay: true,
+            rtl: document.dir == 'rtl' ? true : false,
+            loop: true,
+            dots: true,
+            nav: false,
+        });
+        $(".half-item .item").unwrap();
+        $(".famous-blog").addClass("owl-carousel");
+        $('.famous-blog').owlCarousel({
+            items: 1,
             margin: 15,
             autoplay: true,
             rtl: document.dir == 'rtl' ? true : false,
