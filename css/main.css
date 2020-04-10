@@ -919,6 +919,33 @@ header ._2nd-sec {
   text-align: justify;
 }
 
+.thanx-page {
+  text-align: center;
+  padding-bottom: 120px;
+}
+@media (max-width: 767px) {
+  .thanx-page {
+    padding-bottom: 40px;
+  }
+}
+.thanx-page .code {
+  width: 151px;
+  height: 47px;
+  border-radius: 25px;
+  margin: 25px auto;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+}
+.thanx-page .head {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.thanx-page .note {
+  font-size: 18px;
+  color: #999999;
+}
+
 .about-page {
   margin-bottom: 70px;
 }
@@ -2747,6 +2774,11 @@ header ._2nd-sec {
     text-align: center;
     margin-bottom: 20px;
   }
+}
+
+.thanx-text {
+  font-size: 20px;
+  color: #4d4d4d;
 }
 
 .stores {

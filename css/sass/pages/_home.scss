@@ -70,3 +70,32 @@
     color: $grey;
     text-align: justify;
 }
+
+.thanx-page {
+    text-align: center;
+    padding-bottom: 120px;
+
+    @include xs {
+        padding-bottom: 40px;
+    }
+
+    .code {
+        width: 151px;
+        height: 47px;
+        border-radius: 25px;
+        margin: 25px auto;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .head {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .note {
+        font-size: 18px;
+        color: $grey;
+    }
+}
