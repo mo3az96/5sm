@@ -70,9 +70,34 @@ $(document).ready(function () {
         $(this).toggleClass("active");
     });
     //////////
+    $(".left-line").click(function () {
+        $(".pop-cop .cop-details").slideToggle("500");
+        $(this).toggleClass("active");
+    });
+    /////////
+    $(".code").click(function () {
+        $(".mo-modal").fadeIn("300");
+        $(".pop-cop").addClass("open");
+        $('body,html').toggleClass("overflow")
+    });
+    $(".mo-modal").click(function () {
+        $(".mo-modal").fadeOut("400");
+        $(".pop-cop").removeClass("open");
+        $('body,html').toggleClass("overflow")
+    });
+    $(".pop-cop").click(function (e) {
+        e.stopPropagation();
+    });
+    $(".close-btn").click(function () {
+        $(".mo-modal").fadeOut("400");
+        $(".pop-cop").removeClass("open");
+        $('body,html').toggleClass("overflow")
+    });
+    /////////
     $(".collpse-title").click(function () {
         $(".mo-collapse").slideToggle("500");
         $(this).toggleClass("active");
+        $('body,html').toggleClass("overflow")
     });
     //////////////
     $(".mo-dropdown").click(function () {

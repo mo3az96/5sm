@@ -4,3 +4,314 @@
         padding: 0 0 50px;
     }
 }
+
+
+.mo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000000, 0.3);
+    z-index: 9999;
+    padding: 25px 15px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ff9536 #fff;
+    display: none;
+
+    @include xs {
+        padding: 50px 0;
+    }
+
+    &::-webkit-scrollbar {
+        background-color: #fff;
+        width: 7px;
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ff9536;
+    }
+
+    .pop-cop {
+        background-color: #fff;
+        width: 750px;
+        max-width: 100%;
+        padding-top: 39px;
+        padding-right: 9px;
+        padding-left: 9px;
+        margin: auto;
+        margin-top: 100px;
+        position: relative;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        @include transition(all 0.4s ease-in-out);
+
+        &.open {
+            transform: translateY(-0%);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @include xs {
+            margin: 0 auto;
+            width: calc(100% - 30px);
+        }
+
+        .store {
+            margin: 0;
+            width: 86px;
+            height: 86px;
+            margin-right: 30px;
+            margin-left: 12px;
+        }
+    }
+
+    .cop-div-head {
+        display: flex;
+
+        @include xs {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .cop-info {
+        padding-top: 20px;
+        padding-left: 120px;
+
+        @include xs {
+            padding-left: 0;
+        }
+    }
+
+    .cop-div-desc {
+        font-size: 17px;
+        color: $text;
+        line-height: 1.412;
+        margin-bottom: 30px;
+
+        @include xs {
+            text-align: center;
+        }
+    }
+
+    .copy-head {
+        font-size: 16px;
+        color: $text;
+        font-family: bold;
+    }
+
+    .code {
+        width: 347px;
+        height: 47px;
+        border-radius: 25px;
+        font-size: 22px;
+        padding: 0 55px;
+
+        .code-cover {
+            width: 199px;
+            border-radius: 25px;
+            padding: 0;
+            text-align: center;
+            justify-content: center;
+            font-size: 21px;
+
+            @include xs {
+                width: 50%;
+                font-size: 16px;
+            }
+        }
+
+        @include xs {
+            width: 100%;
+        }
+    }
+
+    .line {
+        display: flex;
+        align-items: center;
+
+        &:last-of-type {
+            margin-top: 25px;
+        }
+
+        @include xs {
+            flex-direction: column;
+        }
+    }
+
+    .left-line {
+        margin-top: 17px;
+        margin-right: 22px;
+
+        @include xs {
+            margin-top: 15px;
+            margin-right: 0;
+        }
+
+        span {
+            font-size: 13px;
+            color: $grey;
+            cursor: pointer;
+
+            &:hover {
+                color: $text;
+            }
+
+            &.hide-text {
+                display: none;
+            }
+
+            &::after {
+                content: "\f078";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 15px;
+                margin-right: 8px;
+            }
+        }
+
+        &.active {
+            span {
+                display: none;
+
+                &.hide-text {
+                    display: block;
+
+                    &::after {
+                        content: "\f077";
+                    }
+                }
+            }
+        }
+    }
+
+    .cop-details {
+        margin: 0;
+    }
+
+    .go-to {
+        width: 157px;
+        height: 38px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $grey;
+        font-size: 16px;
+        color: #fff;
+        font-family: med;
+        transition: 0.3s;
+        margin-left: 17px;
+
+        &:hover {
+            background-color: $orange;
+        }
+
+        @include xs {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    .show {
+        font-size: 15px;
+        color: #2189e6;
+        text-decoration: underline;
+        transition: 0.3s;
+
+        &:hover {
+            color: $orange;
+            text-decoration: none;
+        }
+    }
+
+
+    .newsletter-form {
+        width: 315px;
+        height: 41px;
+        margin: 0;
+
+        @include xs {
+            margin-top: 20px;
+        }
+    }
+
+    .newsletter-input {
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        border: 1px solid $border;
+        background-color: $back;
+
+        &:focus {
+            box-shadow: none;
+            border-color: $orange;
+        }
+    }
+
+    .cop-div-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $border;
+        padding: 13px 9px;
+        margin-top: 40px;
+
+        @include xs {
+            flex-direction: column;
+        }
+    }
+
+    .newsletter-button {
+        font-size: 12px;
+        height: 32px;
+        width: 105px;
+        padding: 0;
+        background-color: $text;
+
+        &:hover {
+            background-color: $orange;
+        }
+
+        @include xs {
+            width: 32px;
+        }
+    }
+
+    .cop-div-link {
+        color: $grey;
+        font-size: 13px;
+        display: inline-flex;
+        align-items: center;
+        margin: 0 6px;
+
+        i {
+            font-size: 15px;
+            margin-left: 6px;
+            transition: none;
+        }
+
+        &:hover {
+            color: $text;
+        }
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #cccccc;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        color: $orange;
+    }
+}
