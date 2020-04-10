@@ -100,7 +100,6 @@ $(document).ready(function () {
     $(".collpse-title").click(function () {
         $(".mo-collapse").slideToggle("500");
         $(this).toggleClass("active");
-        $('body,html').toggleClass("overflow")
     });
     //////////////
     $(".mo-dropdown").click(function () {
