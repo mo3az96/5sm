@@ -80,6 +80,9 @@ $(document).ready(function () {
         $(".pop-cop").addClass("open");
         $('body,html').toggleClass("overflow")
     });
+    $(".pop-cop .code").click(function () {
+        e.preventDefault();
+    });
     $(".mo-modal").click(function () {
         $(".mo-modal").fadeOut("400");
         $(".pop-cop").removeClass("open");
