@@ -193,7 +193,8 @@
     }
 }
 
-.famous-blog {
+.famous-blog,
+.images {
     .owl-dots {
         display: flex;
         align-items: center;
@@ -220,5 +221,11 @@
                 background: $secorange;
             }
         }
+    }
+}
+
+.images {
+    @include xs {
+        margin-bottom: 20px;
     }
 }

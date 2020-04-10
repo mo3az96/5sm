@@ -63,6 +63,17 @@ $(document).ready(function () {
             },
         }
     });
+    //////////
+    $(".left-foot").click(function () {
+        var x = $(this).parent().siblings();
+        $(x[1]).slideToggle("500");
+        $(this).toggleClass("active");
+    });
+    //////////
+    $(".collpse-title").click(function () {
+        $(".mo-collapse").slideToggle("500");
+        $(this).toggleClass("active");
+    });
     //////////////
     $(".mo-dropdown").click(function () {
         $('.mega').slideToggle("500");
@@ -149,6 +160,16 @@ $(document).ready(function () {
         $(".famous-blog").removeClass("related");
         $(".famous-blog").addClass("owl-carousel");
         $('.famous-blog').owlCarousel({
+            items: 1,
+            margin: 15,
+            autoplay: true,
+            rtl: document.dir == 'rtl' ? true : false,
+            loop: true,
+            dots: true,
+            nav: false,
+        });
+        $(".images").addClass("owl-carousel");
+        $('.images').owlCarousel({
             items: 1,
             margin: 15,
             autoplay: true,

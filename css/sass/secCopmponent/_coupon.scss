@@ -43,6 +43,20 @@
         flex: 1;
     }
 
+    .right {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+
+        .code {
+            width: 219px;
+        }
+
+        @include xs {
+            flex-direction: column;
+        }
+    }
+
     .line {
         display: flex;
         justify-content: space-between;
@@ -112,6 +126,11 @@
         align-items: center;
         justify-content: center;
         border-top: 1px solid #ededed;
+
+        @include xs {
+            height: auto;
+            padding: 15px 0;
+        }
     }
 
     .cop-div-link {
@@ -129,6 +148,48 @@
 
         &:hover {
             color: $text;
+        }
+    }
+
+    .left-foot {
+        @include xs {
+            margin-top: 15px;
+        }
+
+        span {
+            font-size: 13px;
+            color: $grey;
+            cursor: pointer;
+
+            &:hover {
+                color: $text;
+            }
+
+            &.hide-text {
+                display: none;
+            }
+
+            &::after {
+                content: "\f078";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 15px;
+                margin-right: 8px;
+            }
+        }
+
+        &.active {
+            span {
+                display: none;
+
+                &.hide-text {
+                    display: block;
+
+                    &::after {
+                        content: "\f077";
+                    }
+                }
+            }
         }
     }
 }
@@ -238,6 +299,56 @@
         &:hover {
             background-color: $orange;
         }
+    }
+
+}
+
+.react-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 14px;
+    margin-top: 10px;
+
+    .react {
+        margin: 0 6px;
+        font-size: 15px;
+        color: $grey;
+        transition: 0;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+
+.cop-details {
+    padding: 20px 30px;
+    border-top: 1px solid $border;
+    margin: 0 -9px;
+    transition: none;
+    display: none;
+
+    @include xs {
+        padding: 20px 15px;
+    }
+}
+
+.details-head {
+    font-size: 17px;
+    color: $text;
+    font-family: bold;
+}
+
+.details-text {
+    font-size: 17px;
+    color: $text;
+    margin-top: 15px;
+    text-align: justify;
+
+    &::before {
+        content: "-";
     }
 
 }
