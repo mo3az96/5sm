@@ -33,7 +33,7 @@ $(document).ready(function () {
     $('.main-slider').owlCarousel({
         items: 1,
         margin: 30,
-        autoplay: true,
+        autoplay: false,
         rtl: document.dir == 'rtl' ? true : false,
         loop: true,
         dots: true,
@@ -89,7 +89,7 @@ $(document).ready(function () {
     $('.top-cats').owlCarousel({
         items: 6,
         margin: 15,
-        autoplay: true,
+        autoplay: false,
         rtl: document.dir == 'rtl' ? true : false,
         loop: true,
         dots: true,
@@ -117,7 +117,7 @@ $(document).ready(function () {
     $('.top-stores').owlCarousel({
         items: 7,
         margin: 11,
-        autoplay: true,
+        autoplay: false,
         rtl: document.dir == 'rtl' ? true : false,
         loop: true,
         dots: true,
@@ -148,7 +148,7 @@ $(document).ready(function () {
         $('.famous-stores .stores').owlCarousel({
             items: 2,
             margin: 15,
-            autoplay: true,
+            autoplay: false,
             rtl: document.dir == 'rtl' ? true : false,
             loop: true,
             dots: true,
@@ -162,7 +162,7 @@ $(document).ready(function () {
         $('.famous-blog').owlCarousel({
             items: 1,
             margin: 15,
-            autoplay: true,
+            autoplay: false,
             rtl: document.dir == 'rtl' ? true : false,
             loop: true,
             dots: true,
@@ -172,7 +172,7 @@ $(document).ready(function () {
         $('.images').owlCarousel({
             items: 1,
             margin: 15,
-            autoplay: true,
+            autoplay: false,
             rtl: document.dir == 'rtl' ? true : false,
             loop: true,
             dots: true,
