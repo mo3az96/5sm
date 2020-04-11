@@ -78,10 +78,13 @@ $(document).ready(function () {
     $(".code").click(function () {
         $(".mo-modal").fadeIn("300");
         $(".pop-cop").addClass("open");
-        $('body,html').toggleClass("overflow")
+        $('body,html').toggleClass("overflow");
     });
     $(".pop-cop .code").click(function () {
         e.preventDefault();
+    });
+    $(".thanx-page .code").click(function () {
+        $('body,html').removeClass("overflow");
     });
     $(".mo-modal").click(function () {
         $(".mo-modal").fadeOut("400");
