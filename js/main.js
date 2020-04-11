@@ -105,11 +105,12 @@ $(document).ready(function () {
         $(this).toggleClass("active");
     });
     //////////////
-    $(".mo-dropdown").click(function () {
+    $(".mo-dropdown .nav-anchor").click(function () {
         $('.mega').slideToggle("500");
         $('.mega-over').fadeToggle("300");
         $(this).toggleClass("open");
     });
+
     $(".mega-over").click(function () {
         $('.mega').slideToggle("500");
         $('.mega-over').fadeToggle("300");

@@ -102,6 +102,10 @@
         width: 110px;
     }
 
+    @include xs {
+        margin-bottom: 4px;
+    }
+
     &.active {
         background-color: $orange;
         color: #fff;

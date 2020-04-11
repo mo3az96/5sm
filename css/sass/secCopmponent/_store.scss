@@ -3,12 +3,26 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include xs {
+        justify-content: center;
+    }
+
 
     .store {
         margin-left: 11px;
 
         &:nth-of-type(7n) {
             margin-left: 0;
+        }
+
+        @include xs {
+            &:nth-of-type(7n) {
+                margin-left: 11px;
+            }
+
+            &:nth-of-type(2n) {
+                margin-left: 0;
+            }
         }
     }
 }
