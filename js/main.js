@@ -262,4 +262,24 @@ $(document).ready(function () {
     $('.nav-tgl').click(function () {
         $('body,html').toggleClass("overflow")
     });
+
+
+
+
+    var options = {
+
+        url: "js/data.json",
+
+        getValue: "name",
+
+        list: {
+            match: {
+                enabled: true
+            }
+        },
+
+        theme: "square"
+    };
+
+    $(".search-input").easyAutocomplete(options);
 });

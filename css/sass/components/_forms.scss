@@ -11,31 +11,35 @@
     }
 }
 
-.search-input {
-    border: 1px solid $border;
-    border-radius: 20px;
-    background-color: $search-back;
-    color: $text;
-    font-size: 16px;
-    text-align: right;
-    width: 300px;
-    height: 40px;
-    padding-right: 45px;
-    padding-left: 20px;
+.easy-autocomplete {
+    .search-input {
+        border: 1px solid $border;
+        border-radius: 20px;
+        background-color: $search-back;
+        color: $text;
+        font-size: 16px;
+        text-align: right;
+        width: 300px;
+        height: 40px;
+        padding-right: 45px;
+        padding-left: 20px;
+        box-shadow: none;
 
-    &::placeholder {
-        font-size: 14px;
-        color: $plaeholder;
-    }
+        &::placeholder {
+            font-size: 14px;
+            color: $plaeholder;
+        }
 
-    &:focus {
-        border-color: $orange;
-    }
+        &:focus {
+            border-color: $orange;
+        }
 
-    @include xs {
-        width: 100%;
+        @include xs {
+            width: 100%;
+        }
     }
 }
+
 
 .search-button {
     color: $place-ion;
@@ -44,6 +48,7 @@
     right: 19px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 9;
 
     &:hover {
         color: $orange;
@@ -205,4 +210,31 @@
             text-align: center;
         }
     }
+}
+
+.easy-autocomplete-container ul {
+    padding: 0;
+}
+
+.easy-autocomplete-container ul li,
+.easy-autocomplete-container ul .eac-category {
+    color: $text;
+    font-size: 16px;
+    border-color: transparent;
+
+    b {
+        transition: none;
+    }
+}
+
+.easy-autocomplete-container ul li:hover,
+.easy-autocomplete-container ul li.selected,
+.easy-autocomplete-container ul .eac-category:hover {
+    background-color: $back;
+    color: $orange;
+}
+
+.easy-autocomplete-container ul {
+    border: none;
+    box-sizing: 5px;
 }
