@@ -29,11 +29,17 @@ $(document).ready(function () {
             $(".fixed-header").removeClass("scroll");
         }
     });
+    /////////////////////
+    if ($(window).width() > 767) {
+        $(".item-owl .store").unwrap();
+    }
     /////////Main Slider/////////
     $('.main-slider').owlCarousel({
         items: 1,
         margin: 30,
-        autoplay: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
         rtl: document.dir == 'rtl' ? true : false,
         loop: true,
         dots: true,
@@ -45,6 +51,9 @@ $(document).ready(function () {
         items: 3,
         margin: 30,
         rtl: document.dir == 'rtl' ? true : false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
         loop: true,
         nav: false,
         dots: true,
@@ -104,23 +113,13 @@ $(document).ready(function () {
         $(".mo-collapse").slideToggle("500");
         $(this).toggleClass("active");
     });
-    //////////////
-    $(".mo-dropdown .nav-anchor").click(function () {
-        $('.mega').slideToggle("500");
-        $('.mega-over').fadeToggle("300");
-        $(this).toggleClass("open");
-    });
-
-    $(".mega-over").click(function () {
-        $('.mega').slideToggle("500");
-        $('.mega-over').fadeToggle("300");
-        $(".mo-dropdown").toggleClass("open");
-    });
     ////////////////////////////////
     $('.top-cats').owlCarousel({
         items: 6,
         margin: 15,
-        autoplay: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
         rtl: document.dir == 'rtl' ? true : false,
         loop: true,
         dots: true,
@@ -148,7 +147,9 @@ $(document).ready(function () {
     $('.top-stores').owlCarousel({
         items: 7,
         margin: 11,
-        autoplay: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
         rtl: document.dir == 'rtl' ? true : false,
         loop: true,
         dots: true,
@@ -156,7 +157,7 @@ $(document).ready(function () {
         navText: ["<i class='fas fa-chevron-right'></i>", "<i class='fas fa-chevron-left'></i>"],
         responsive: {
             0: {
-                items: 2,
+                items: 3,
             },
             480: {
                 items: 3,
@@ -175,11 +176,24 @@ $(document).ready(function () {
     ////////////////////////////
 
     if ($(window).width() <= 767) {
+        $(".mo-dropdown .nav-anchor").click(function () {
+            $('.mega').slideToggle("500");
+            $('.mega-over').fadeToggle("300");
+            $(this).toggleClass("open");
+        });
+
+        $(".mega-over").click(function () {
+            $('.mega').slideToggle("500");
+            $('.mega-over').fadeToggle("300");
+            $(".mo-dropdown").toggleClass("open");
+        });
         $(".famous-stores .stores").addClass("owl-carousel");
         $('.famous-stores .stores').owlCarousel({
-            items: 2,
-            margin: 15,
-            autoplay: false,
+            items: 3,
+            margin: 8,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
             rtl: document.dir == 'rtl' ? true : false,
             loop: true,
             dots: true,
@@ -193,7 +207,9 @@ $(document).ready(function () {
         $('.famous-blog').owlCarousel({
             items: 1,
             margin: 15,
-            autoplay: false,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
             rtl: document.dir == 'rtl' ? true : false,
             loop: true,
             dots: true,
@@ -203,7 +219,9 @@ $(document).ready(function () {
         $('.images').owlCarousel({
             items: 1,
             margin: 15,
-            autoplay: false,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
             rtl: document.dir == 'rtl' ? true : false,
             loop: true,
             dots: true,

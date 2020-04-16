@@ -58,7 +58,14 @@
         }
     }
 
-    &.open {
+
+    &:hover {
+        .mega {
+            visibility: visible;
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
         >.nav-anchor {
             color: $orange;
 
@@ -76,14 +83,23 @@
     right: 0;
     background-color: #fff;
     border-top: 1px solid $back;
-    transition: none;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: top;
+    transform: scaleY(0);
 
     @include xs {
         position: relative;
         top: auto;
         left: auto;
         right: auto;
+        transform-origin: unset;
+        opacity: 1;
+        transition: none;
+        visibility: visible;
+        transform: none;
+        border: none;
+        display: none;
     }
 
     .mega-ul {

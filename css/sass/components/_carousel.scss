@@ -229,3 +229,15 @@
         margin-bottom: 20px;
     }
 }
+
+.item-owl {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .store {
+        width: 100px !important;
+        height: 100px !important;
+        margin: 0 3px 10px !important;
+    }
+}

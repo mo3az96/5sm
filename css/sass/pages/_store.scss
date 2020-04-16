@@ -196,6 +196,10 @@
 .mo-tabs {
     display: flex;
     align-items: center;
+
+    @include xs {
+        justify-content: space-between;
+    }
 }
 
 .mo-tab {
@@ -210,6 +214,11 @@
     margin-left: 5px;
     padding: 0 19px;
     transition: 0.3s;
+
+    @include xs {
+        margin-left: 0;
+        padding: 0 5px;
+    }
 
     &:hover,
     &:focus,
