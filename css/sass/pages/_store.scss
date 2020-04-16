@@ -284,6 +284,10 @@
         background-color: $back;
         font-size: 18px;
         font-family: med;
+
+        @include xs {
+            font-size: 16px;
+        }
     }
 
     td {
@@ -298,6 +302,12 @@
         line-height: 50px;
         color: $text;
         white-space: nowrap;
+
+        @include xs {
+            white-space: unset;
+            line-height: unset;
+            padding: 10px;
+        }
     }
 }
 
