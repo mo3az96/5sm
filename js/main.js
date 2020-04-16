@@ -89,6 +89,16 @@ $(document).ready(function () {
         $(".pop-cop").addClass("open");
         $('body,html').toggleClass("overflow");
     });
+    $(".sms-open").click(function () {
+        $(".sms-modal").fadeIn("300");
+        $(".pop-cop").addClass("open");
+        $('body,html').toggleClass("overflow");
+    });
+    $(".share-open").click(function () {
+        $(".share-modal").fadeIn("300");
+        $(".pop-cop").addClass("open");
+        $('body,html').toggleClass("overflow");
+    });
     $(".pop-cop .code").click(function () {
         e.preventDefault();
     });
@@ -100,11 +110,23 @@ $(document).ready(function () {
         $(".pop-cop").removeClass("open");
         $('body,html').toggleClass("overflow")
     });
+    $(".sms-modal").click(function () {
+        $(".sms-modal").fadeOut("400");
+        $(".pop-cop").removeClass("open");
+        $('body,html').toggleClass("overflow")
+    });
+    $(".share-modal").click(function () {
+        $(".share-modal").fadeOut("400");
+        $(this).find(".pop-cop").removeClass("open");
+        $('body,html').toggleClass("overflow")
+    });
     $(".pop-cop").click(function (e) {
         e.stopPropagation();
     });
     $(".close-btn").click(function () {
         $(".mo-modal").fadeOut("400");
+        $(".sms-modal").fadeOut("400");
+        $(".share-modal").fadeOut("400");
         $(".pop-cop").removeClass("open");
         $('body,html').toggleClass("overflow")
     });

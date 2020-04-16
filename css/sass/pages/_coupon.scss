@@ -6,7 +6,9 @@
 }
 
 
-.mo-modal {
+.mo-modal,
+.sms-modal,
+.share-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -300,6 +302,44 @@
             color: $text;
         }
     }
+
+    .sms-form {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        @include xs {
+            width: 90%;
+        }
+    }
+
+    .pop-btn {
+        height: 52px;
+        width: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-size: 16px;
+        color: #fff;
+        border-radius: 50%;
+        background-color: $orange;
+        margin-right: 10px;
+        border: 1px solid $orange;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            background-color: transparent;
+            color: $orange;
+        }
+    }
+
+    .mo-input {
+        flex: 1;
+        margin: 0;
+    }
 }
 
 .close-btn {
@@ -313,5 +353,55 @@
 
     &:hover {
         color: $orange;
+    }
+
+}
+
+.sms-modal {
+    @include xs {
+        padding: 100px 0;
+    }
+
+    .pop-cop {
+        padding-bottom: 25px;
+    }
+}
+
+.share-modal {
+    z-index: 99999;
+
+    .sec-header {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include xs {
+            width: 100%;
+        }
+    }
+
+    @include xs {
+        padding: 100px 0;
+    }
+
+    .pop-cop {
+        padding-bottom: 25px;
+    }
+
+    .share-methods {
+        justify-content: center;
+
+        .share-method {
+            margin: 0 5px;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+
+            @include xs {
+                width: 40px;
+                height: 40px;
+                margin: 0 3px;
+            }
+        }
     }
 }
