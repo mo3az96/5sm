@@ -23,11 +23,17 @@ $(document).ready(function () {
         }, 1000, 'swing');
     });
     $(window).scroll(function () {
+        $(this).scrollTop() >= 500 ? $(".arro_top").fadeIn(500) : $(".arro_top").fadeOut(500);
         if ($(this).scrollTop() >= 40) {
             $(".fixed-header").addClass("scroll");
         } else {
             $(".fixed-header").removeClass("scroll");
         }
+    });
+    $(".arro_top").click(function () {
+        $("html,body").animate({
+            scrollTop: 0
+        }, 1000);
     });
     /////////////////////
     if ($(window).width() > 767) {
