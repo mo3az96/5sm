@@ -3686,6 +3686,41 @@ footer {
   }
 }
 
+.cookie {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  z-index: 99;
+  color: #4d4d4d;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.cookie-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ffad35;
+  height: 30px;
+  border-radius: 15px;
+  padding: 0 10px;
+  border: 1px solid #ffad35;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.cookie-btn:hover {
+  background-color: transparent;
+  color: #ffad35;
+}
+
 @media (max-width: 992px) {
   header .header ._2nd-sec {
     display: block;
