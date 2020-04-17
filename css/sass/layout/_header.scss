@@ -14,9 +14,32 @@ header {
         z-index: 999;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 
+        .nav-li {
+            >.nav-anchor {
+                line-height: 89px;
+                transition: none;
+                backface-visibility: hidden;
+
+                &:after {
+                    line-height: 89px;
+                    backface-visibility: hidden;
+                }
+            }
+        }
+
         &.scroll {
-            .header {
-                padding: 10px 0;
+
+            .nav-li {
+                >.nav-anchor {
+                    line-height: 62px;
+                    transition: none;
+                    backface-visibility: hidden;
+
+                    &:after {
+                        line-height: 62px;
+                        backface-visibility: hidden;
+                    }
+                }
             }
 
             .logo {
@@ -33,7 +56,6 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 18px 0 19px;
     }
 
     .logo {

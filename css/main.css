@@ -123,6 +123,8 @@ html {
 }
 .search-cont {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .search-cont * {
   -moz-transition: all 0.3s ease-in-out;
@@ -378,6 +380,7 @@ html {
   font-size: 16px;
   color: #4d4d4d;
   font-family: med;
+  backface-visibility: hidden;
 }
 .nav-anchor:hover, .nav-anchor:focus {
   color: #ffad35;
@@ -832,8 +835,23 @@ header .fixed-header {
   z-index: 999;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
-header .fixed-header.scroll .header {
-  padding: 10px 0;
+header .fixed-header .nav-li > .nav-anchor {
+  line-height: 89px;
+  transition: none;
+  backface-visibility: hidden;
+}
+header .fixed-header .nav-li > .nav-anchor:after {
+  line-height: 89px;
+  backface-visibility: hidden;
+}
+header .fixed-header.scroll .nav-li > .nav-anchor {
+  line-height: 62px;
+  transition: none;
+  backface-visibility: hidden;
+}
+header .fixed-header.scroll .nav-li > .nav-anchor:after {
+  line-height: 62px;
+  backface-visibility: hidden;
 }
 header .fixed-header.scroll .logo {
   width: 150px;
@@ -845,7 +863,6 @@ header .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0 19px;
 }
 header .logo {
   width: 190px;

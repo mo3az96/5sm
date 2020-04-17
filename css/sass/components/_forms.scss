@@ -1,5 +1,8 @@
 .search-cont {
     position: relative;
+    display: flex;
+    align-items: center;
+
 
     * {
         @include transition(all 0.3s ease-in-out);

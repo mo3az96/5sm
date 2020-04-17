@@ -310,4 +310,8 @@ $(document).ready(function () {
     };
 
     $(".search-input").easyAutocomplete(options);
+    $('.cookie-btn.acc').click(function () {
+        $('.cookie').slideToggle(300)
+    });
+
 });

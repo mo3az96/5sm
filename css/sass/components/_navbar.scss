@@ -16,6 +16,7 @@
     font-size: 16px;
     color: $text;
     font-family: med;
+    backface-visibility: hidden;
 
     &:hover,
     &:focus {
