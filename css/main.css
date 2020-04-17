@@ -738,6 +738,15 @@ html {
   margin: 0 3px 10px !important;
 }
 
+.page-rest .stores .store:last-of-type {
+  display: none;
+}
+@media (max-width: 992px) {
+  .page-rest .stores .store:last-of-type {
+    display: flex;
+  }
+}
+
 @media (max-width: 992px) {
   .nav-foot-cont {
     margin-bottom: 5px;

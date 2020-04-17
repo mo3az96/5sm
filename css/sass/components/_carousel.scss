@@ -241,3 +241,17 @@
         margin: 0 3px 10px !important;
     }
 }
+
+.page-rest {
+    .stores {
+        .store {
+            &:last-of-type {
+                display: none;
+
+                @include xs {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
