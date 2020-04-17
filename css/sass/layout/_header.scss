@@ -14,20 +14,36 @@ header {
         z-index: 999;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 
+        @include xs {
+            padding: 18px 0 19px;
+
+        }
+
         .nav-li {
             >.nav-anchor {
                 line-height: 89px;
                 transition: none;
                 backface-visibility: hidden;
 
+                @include xs {
+                    line-height: unset;
+                }
+
                 &:after {
                     line-height: 89px;
                     backface-visibility: hidden;
+
+                    @include xs {
+                        line-height: unset;
+                    }
                 }
             }
         }
 
         &.scroll {
+            @include xs {
+                padding: 8px 0;
+            }
 
             .nav-li {
                 >.nav-anchor {
@@ -35,9 +51,17 @@ header {
                     transition: none;
                     backface-visibility: hidden;
 
+                    @include xs {
+                        line-height: unset;
+                    }
+
                     &:after {
                         line-height: 62px;
                         backface-visibility: hidden;
+
+                        @include xs {
+                            line-height: unset;
+                        }
                     }
                 }
             }
