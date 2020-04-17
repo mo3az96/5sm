@@ -15,6 +15,10 @@
 }
 
 .easy-autocomplete {
+    @include xs {
+        width: 100%;
+    }
+
     .search-input {
         border: 1px solid $border;
         border-radius: 20px;
@@ -38,7 +42,7 @@
         }
 
         @include xs {
-            width: 100%;
+            width: 280px;
         }
     }
 }

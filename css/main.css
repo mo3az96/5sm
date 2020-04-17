@@ -139,6 +139,11 @@ html {
   }
 }
 
+@media (max-width: 992px) {
+  .easy-autocomplete {
+    width: 100%;
+  }
+}
 .easy-autocomplete .search-input {
   border: 1px solid #ededed;
   border-radius: 20px;
@@ -161,7 +166,7 @@ html {
 }
 @media (max-width: 992px) {
   .easy-autocomplete .search-input {
-    width: 100%;
+    width: 280px;
   }
 }
 
@@ -3820,7 +3825,7 @@ footer {
     -o-clip-path: circle(30px at 37px 44px);
     z-index: 999;
     visibility: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   header .header ._2nd-sec .mo-navbar {
     flex-direction: column;
