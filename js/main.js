@@ -123,7 +123,7 @@ $(document).ready(function () {
     });
     $(".share-modal").click(function () {
         $(".share-modal").fadeOut("400");
-        $(this).find(".pop-cop").removeClass("open");
+        $(".pop-cop").removeClass("open");
         $('body,html').toggleClass("overflow")
     });
     $(".pop-cop").click(function (e) {
