@@ -3185,6 +3185,10 @@ header ._2nd-sec {
   background: #ff9436;
 }
 
+.stores-slider {
+  padding-top: 10px;
+}
+
 .imgs {
   position: relative;
 }
