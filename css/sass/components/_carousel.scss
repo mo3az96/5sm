@@ -164,34 +164,7 @@
     }
 }
 
-.stores {
-    .owl-dots {
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-        .owl-dot {
-            background: rgba(#000, 0.3);
-            outline: none;
-            border: none;
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            cursor: pointer;
-            margin: 0 4px;
-            @include transition(all 0.3s ease-in-out);
-
-            &.active {
-                background: $secorange;
-                pointer-events: none;
-            }
-
-            &:hover {
-                background: $secorange;
-            }
-        }
-    }
-}
 
 .famous-blog,
 .images {
@@ -230,26 +203,23 @@
     }
 }
 
-.item-owl {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    .store {
-        width: 100px !important;
-        height: 100px !important;
-        margin: 0 3px 10px !important;
-    }
-}
+// .famous-stores {
+//     .store {
+//         width: 100px !important;
+//         height: 100px !important;
+//     }
+// }
 
 .page-rest {
-    .stores {
-        .store {
-            &:last-of-type {
-                display: none;
+    .famous-stores {
+        .stores-slider {
+            .store {
+                width: 105px;
+                height: 105px;
 
                 @include xs {
-                    display: flex;
+                    width: 100px;
+                    height: 100px;
                 }
             }
         }

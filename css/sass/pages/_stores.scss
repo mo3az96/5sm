@@ -1,10 +1,18 @@
 .top-stores {
+    position: relative;
+
     .store {
         margin-top: 10px;
+
+        @include xs {
+            width: 100px;
+            height: 100px;
+        }
     }
 
-    .owl-dots {
+    .swiper-pagination-bullets {
         display: none;
+        width: 100%;
 
         @include xs {
             display: flex;
@@ -13,7 +21,7 @@
         align-items: center;
         justify-content: center;
 
-        .owl-dot {
+        .swiper-pagination-bullet {
             background: rgba(#000, 0.3);
             outline: none;
             border: none;
@@ -24,7 +32,7 @@
             margin: 0 4px;
             @include transition(all 0.3s ease-in-out);
 
-            &.active {
+            &.swiper-pagination-bullet-active {
                 background: $secorange;
                 pointer-events: none;
             }
@@ -35,36 +43,40 @@
         }
     }
 
-    .owl-nav {
-        width: 0;
-        height: 0;
+
+
+    .swiper-btn {
+        position: absolute;
+        top: 67px;
+        outline: none;
+        border: none;
+        color: rgba(#000, 0.4);
+        background: none;
+        font-size: 20px;
+        @include transition(all 0.3s ease-in-out);
 
         @include sm {
             display: none;
         }
 
-        button[class^=owl-] {
-            position: absolute;
-            top: 67px;
-            outline: none;
-            border: none;
-            color: rgba(#000, 0.4);
-            font-size: 20px;
-            @include transition(all 0.3s ease-in-out);
+        &::after,
+        &::before {
+            display: none;
+        }
 
-            &.owl-next {
-                left: -40px;
-            }
+        &.swiper-button-next {
+            right: -40px;
+        }
 
-            &.owl-prev {
-                right: -40px;
-            }
+        &.swiper-button-prev {
+            left: -40px;
+        }
 
-            &:hover {
-                color: $secorange;
-            }
+        &:hover {
+            color: $secorange;
         }
     }
+
 }
 
 

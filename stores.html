@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/easy-autocomplete.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -137,48 +138,51 @@
         <div class="famous-stores-page">
             <div class="container">
                 <h2 class="sec-header fixall">أشهر المتاجر</h2>
-                <div class="top-stores owl-carousel">
-                    <div class="item-owl">
-                        <a href="store.html" class="store fixall ">
-                            <img class="img-fluid" src="images/store1.png">
-                        </a>
-                        <a href="store.html" class="store fixall ">
-                            <img class="img-fluid" src="images/store2.png">
-                        </a>
+                <div class="top-stores">
+                    <div class="topstores-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="store.html" class="store fixall">
+                                    <img class="img-fluid" src="images/store1.png">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="store.html" class="store fixall">
+                                    <img class="img-fluid" src="images/store2.png">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="store.html" class="store fixall">
+                                    <img class="img-fluid" src="images/store3.png">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="store.html" class="store fixall">
+                                    <img class="img-fluid" src="images/store4.png">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="store.html" class="store fixall">
+                                    <img class="img-fluid" src="images/store5.png">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="store.html" class="store fixall">
+                                    <img class="img-fluid" src="images/store6.png">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="store.html" class="store fixall">
+                                    <img class="img-fluid" src="images/store7.png">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="item-owl">
-                        <a href="store.html" class="store fixall ">
-                            <img class="img-fluid" src="images/store3.png">
-                        </a>
-                        <a href="store.html" class="store fixall wo">
-                            <img class="img-fluid" src="images/store4.png">
-                        </a>
-                    </div>
-                    <div class="item-owl">
-                        <a href="store.html" class="store fixall ">
-                            <img class="img-fluid" src="images/store5.png">
-                        </a>
-                        <a href="store.html" class="store fixall ">
-                            <img class="img-fluid" src="images/store6.png">
-                        </a>
-                    </div>
-                    <div class="item-owl">
-                        <a href="store.html" class="store fixall ">
-                            <img class="img-fluid" src="images/store7.png">
-                        </a>
-                        <a href="store.html" class="store fixall ">
-                            <img class="img-fluid" src="images/store8.png">
-                        </a>
-                    </div>
-                    <div class="item-owl">
-                        <a href="store.html" class="store fixall ">
-                            <img class="img-fluid" src="images/store9.png">
-                        </a>
-                        <a href="store.html" class="store fixall ">
-                            <img class="img-fluid" src="images/store10.png">
-                        </a>
-                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next fixall swiper-btn"><span class="fas fa-chevron-right"></span></div>
+                    <div class="swiper-button-prev fixall swiper-btn"><span class="fas fa-chevron-left"></span></div>
                 </div>
+
             </div>
             <div class="all-sec">
                 <div class="container">
@@ -390,8 +394,10 @@
         <div class="container">
             هذا الموقع يستخدم ملفات التعريف الخاصة بك، والروابط من
             طرف ثالث بهدف التسويق بالعمولة.
-            <a href="#!" class="cookie-btn fixall acc">موافق</a>
-            <a href="#!" class="cookie-btn fixall">سياسة الخصوصية</a>
+            <div class="btns">
+                <a href="#!" class="cookie-btn fixall acc">موافق</a>
+                <a href="#!" class="cookie-btn fixall">سياسة الخصوصية</a>
+            </div>
         </div>
     </div>
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
@@ -408,6 +414,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="js/jquery.easy-autocomplete.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/js/swiper.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

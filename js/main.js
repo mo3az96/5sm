@@ -35,10 +35,6 @@ $(document).ready(function () {
             scrollTop: 0
         }, 1000);
     });
-    /////////////////////
-    if ($(window).width() > 767) {
-        $(".item-owl .store").unwrap();
-    }
     /////////Main Slider/////////
     $('.main-slider').owlCarousel({
         items: 1,
@@ -172,38 +168,89 @@ $(document).ready(function () {
         }
     });
     ////////////////////////////////
-    $('.top-stores').owlCarousel({
-        items: 7,
-        margin: 11,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        rtl: document.dir == 'rtl' ? true : false,
+    var swiper = new Swiper('.top-stores .topstores-slider', {
+        slidesPerView: 7,
+        spaceBetween: 11,
         loop: true,
-        dots: true,
-        nav: true,
-        navText: ["<i class='fas fa-chevron-right'></i>", "<i class='fas fa-chevron-left'></i>"],
-        responsive: {
+        pagination: {
+            el: '.top-stores .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.top-stores .swiper-button-next',
+            prevEl: '.top-stores .swiper-button-prev',
+        },
+        breakpoints: {
             0: {
-                items: 3,
+                loop: false,
+                slidesPerView: 3,
+                slidesPerColumn: 2,
+                slidesPerColumnFill: "row",
             },
             480: {
-                items: 3,
+                loop: false,
+                slidesPerView: 3,
+                slidesPerColumn: 2,
+                slidesPerColumnFill: "row",
             },
             767: {
-                items: 4,
+                slidesPerView: 4,
             },
             991: {
-                items: 5,
+                slidesPerView: 5,
             },
             1220: {
-                items: 7
+                slidesPerView: 7,
             }
-        }
+        },
     });
     ////////////////////////////
-
+    var swiper = new Swiper('.famous-stores .stores-slider', {
+        slidesPerView: 7,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: "row",
+        simulateTouch: false,
+        pagination: {
+            el: '.famous-stores .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 3,
+                slidesPerColumn: 2,
+                simulateTouch: true,
+            },
+            1199: {
+                slidesPerView: 7,
+                slidesPerColumn: 2,
+            },
+        },
+    });
+    ////////////////////////////
+    var swiper = new Swiper('.page-rest .famous-stores .stores-slider', {
+        slidesPerView: 3,
+        slidesPerColumn: 3,
+        spaceBetween: 5,
+        slidesPerColumnFill: "row",
+        simulateTouch: false,
+        pagination: {
+            el: '.page-rest .famous-stores .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 3,
+                slidesPerColumn: 2,
+                simulateTouch: true,
+            },
+            1199: {
+                slidesPerView: 3,
+                slidesPerColumn: 3,
+            },
+        },
+    });
     if ($(window).width() <= 767) {
+
         $(".mo-dropdown .nav-anchor").click(function () {
             $('.mega').slideToggle("500");
             $('.mega-over').fadeToggle("300");
@@ -215,18 +262,18 @@ $(document).ready(function () {
             $('.mega-over').fadeToggle("300");
             $(".mo-dropdown").toggleClass("open");
         });
-        $(".famous-stores .stores").addClass("owl-carousel");
-        $('.famous-stores .stores').owlCarousel({
-            items: 3,
-            margin: 8,
-            autoplay: true,
-            autoplayTimeout: 4000,
-            autoplayHoverPause: true,
-            rtl: document.dir == 'rtl' ? true : false,
-            loop: true,
-            dots: true,
-            nav: false,
-        });
+        // $(".famous-stores .stores").addClass("owl-carousel");
+        // $('.famous-stores .stores').owlCarousel({
+        //     items: 3,
+        //     margin: 8,
+        //     autoplay: true,
+        //     autoplayTimeout: 4000,
+        //     autoplayHoverPause: true,
+        //     rtl: document.dir == 'rtl' ? true : false,
+        //     loop: true,
+        //     dots: true,
+        //     nav: false,
+        // });
         $(".half-item .item").unwrap();
 
         $(".related").addClass("famous-blog");
@@ -308,6 +355,31 @@ $(document).ready(function () {
 
         theme: "square"
     };
+
+    var options = {
+
+        url: "js/data.json",
+
+        getValue: "name",
+
+        list: {
+            match: {
+                enabled: true
+            },
+            maxNumberOfElements: 8
+        },
+
+        template: {
+            type: "custom",
+            method: function (value, index) {
+                return "<img src='images/store2.png' class='img-fluid search-img'>" + value;
+            }
+        },
+
+        theme: "round"
+    };
+
+    $("#countries-flags").easyAutocomplete(options);
 
     $(".search-input").easyAutocomplete(options);
     $('.cookie-btn.acc').click(function () {

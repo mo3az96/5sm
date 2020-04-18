@@ -49,4 +49,47 @@
     img {
         width: auto !important;
     }
+
+
+}
+
+.famous-stores {
+    .store {
+        @include xs {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .swiper-pagination-bullets {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        @include xs {
+            display: flex;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(#000, 0.3);
+            outline: none;
+            border: none;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.swiper-pagination-bullet-active {
+                background: $secorange;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $secorange;
+            }
+        }
+    }
 }
