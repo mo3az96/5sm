@@ -210,6 +210,9 @@ $(document).ready(function () {
         slidesPerColumn: 2,
         slidesPerColumnFill: "row",
         simulateTouch: false,
+        autoplay: {
+            delay: 4000,
+        },
         pagination: {
             el: '.famous-stores .swiper-pagination',
             clickable: true,
@@ -219,6 +222,9 @@ $(document).ready(function () {
                 slidesPerView: 3,
                 slidesPerColumn: 2,
                 simulateTouch: true,
+                autoplay: {
+                    delay: 4000,
+                },
             },
             1199: {
                 slidesPerView: 7,
@@ -242,6 +248,9 @@ $(document).ready(function () {
                 slidesPerView: 3,
                 slidesPerColumn: 2,
                 simulateTouch: true,
+                autoplay: {
+                    delay: 4000,
+                },
             },
             1199: {
                 slidesPerView: 3,
