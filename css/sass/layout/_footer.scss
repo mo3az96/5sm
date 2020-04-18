@@ -3,6 +3,14 @@ footer {
     padding-top: 65px;
     background-color: $text;
 
+    @include xs {
+        padding-bottom: 100px;
+
+        &.padd {
+            padding-bottom: 0;
+        }
+    }
+
     .logo {
         @include xs {
             margin: auto;

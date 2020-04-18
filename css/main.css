@@ -3689,6 +3689,14 @@ footer {
   background-color: #4d4d4d;
 }
 @media (max-width: 992px) {
+  footer {
+    padding-bottom: 100px;
+  }
+  footer.padd {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 992px) {
   footer .logo {
     margin: auto;
     text-align: center;
