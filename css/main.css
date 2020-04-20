@@ -3978,4 +3978,70 @@ footer {
   left: 0;
 }
 
+.page-404 {
+  min-height: calc(100vh - 477px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+}
+.page-404 .page-head {
+  color: #999999;
+  font-family: black;
+  font-size: 300px;
+  line-height: 0.7;
+  letter-spacing: -10px;
+  margin-bottom: 50px;
+}
+@media (max-width: 992px) {
+  .page-404 .page-head {
+    font-size: 200px;
+  }
+}
+.page-404 .errer-text {
+  font-size: 35px;
+  font-family: xbold;
+  color: #4d4d4d;
+  margin-bottom: 35px;
+}
+@media (max-width: 992px) {
+  .page-404 .errer-text {
+    font-size: 25px;
+  }
+}
+.page-404 .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 25px;
+  width: 200px;
+  color: #ffad35;
+  font-family: bold;
+  border: 2px solid #ffad35;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.page-404 .back:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 5px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.page-404 .back:hover {
+  background-color: #ffad35;
+  color: #fff;
+}
+.page-404 .back:hover:after {
+  transform: translateX(-5px);
+}
+
 /*# sourceMappingURL=main.css.map */

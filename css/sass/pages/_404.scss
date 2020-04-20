@@ -1,0 +1,65 @@
+.page-404 {
+    min-height: calc(100vh - 477px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+    text-align: center;
+
+    .page-head {
+        color: $grey;
+        font-family: black;
+        font-size: 300px;
+        line-height: .7;
+        letter-spacing: -10px;
+        margin-bottom: 50px;
+
+        @include xs {
+            font-size: 200px;
+        }
+    }
+
+    .errer-text {
+        font-size: 35px;
+        font-family: xbold;
+        color: $text;
+        margin-bottom: 35px;
+
+        @include xs {
+            font-size: 25px;
+        }
+    }
+
+    .back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        border-radius: 25px;
+        width: 200px;
+        color: $orange;
+        font-family: bold;
+        border: 2px solid $orange;
+        @include transition(all 0.3s ease-in-out);
+
+        &:after {
+            content: "\f060";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 5px;
+            @include transition(all 0.3s ease-in-out);
+        }
+
+        &:hover {
+            background-color: $orange;
+            color: #fff;
+
+            &:after {
+                transform: translateX(-5px);
+            }
+        }
+
+
+    }
+}
