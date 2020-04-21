@@ -1,5 +1,5 @@
 .page-404 {
-    min-height: calc(100vh - 477px);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,27 +7,57 @@
     padding: 25px;
     text-align: center;
 
-    .page-head {
-        color: $grey;
-        font-family: black;
-        font-size: 300px;
-        line-height: .7;
-        letter-spacing: -10px;
-        margin-bottom: 50px;
+    .div404 {
+        width: 100px;
+        height: 100px;
+        background-color: #ffa101;
+        border: 2px solid #d08e00;
+        position: relative;
+        transform: rotate(45deg);
+        margin-bottom: 25px;
 
-        @include xs {
-            font-size: 200px;
+        &:after {
+            content: "";
+            background-color: transparent;
+            top: -2px;
+            bottom: -2px;
+            left: -2px;
+            right: -2px;
+            position: absolute;
+            border: 2px dashed #000;
         }
     }
 
-    .errer-text {
-        font-size: 35px;
+    .page-head {
+        color: #000;
+        font-family: black;
+        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .errer-head {
+        font-size: 25px;
         font-family: xbold;
-        color: $text;
-        margin-bottom: 35px;
+        color: #000;
+        margin-bottom: 20px;
+        margin-top: 20px;
 
         @include xs {
             font-size: 25px;
+        }
+    }
+
+    .error-text {
+        font-size: 20px;
+        color: $text;
+        width: 400px;
+        margin-bottom: 35px;
+
+        @include xs {
+            width: 100%;
         }
     }
 

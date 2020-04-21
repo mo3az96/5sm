@@ -3979,7 +3979,7 @@ footer {
 }
 
 .page-404 {
-  min-height: calc(100vh - 477px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3987,28 +3987,55 @@ footer {
   padding: 25px;
   text-align: center;
 }
+.page-404 .div404 {
+  width: 100px;
+  height: 100px;
+  background-color: #ffa101;
+  border: 2px solid #d08e00;
+  position: relative;
+  transform: rotate(45deg);
+  margin-bottom: 25px;
+}
+.page-404 .div404:after {
+  content: "";
+  background-color: transparent;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  position: absolute;
+  border: 2px dashed #000;
+}
 .page-404 .page-head {
-  color: #999999;
+  color: #000;
   font-family: black;
-  font-size: 300px;
-  line-height: 0.7;
-  letter-spacing: -10px;
-  margin-bottom: 50px;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.page-404 .errer-head {
+  font-size: 25px;
+  font-family: xbold;
+  color: #000;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 @media (max-width: 992px) {
-  .page-404 .page-head {
-    font-size: 200px;
+  .page-404 .errer-head {
+    font-size: 25px;
   }
 }
-.page-404 .errer-text {
-  font-size: 35px;
-  font-family: xbold;
+.page-404 .error-text {
+  font-size: 20px;
   color: #4d4d4d;
+  width: 400px;
   margin-bottom: 35px;
 }
 @media (max-width: 992px) {
-  .page-404 .errer-text {
-    font-size: 25px;
+  .page-404 .error-text {
+    width: 100%;
   }
 }
 .page-404 .back {
