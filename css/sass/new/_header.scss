@@ -1,0 +1,182 @@
+/*////////////////////// New Header //////////////////////*/
+header {
+  height: 86px;
+  @include xs {
+    height: 62px;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+    @include md {
+      padding: 0 15px;
+    }
+  }
+  .header {
+    align-items: center;
+  }
+  .logo {
+    width: 201px;
+    margin-inline-end: 45px;
+    @include md {
+      margin-inline-end: 30px;
+    }
+    @include xs {
+      width: 150px;
+    }
+  }
+  .fixed-header {
+    @include xs {
+      padding: 10px 0;
+    }
+    .nav-tgl {
+      position: relative;
+      inset: unset;
+      transform: none;
+    }
+    .nav-li {
+      > .nav-anchor {
+        line-height: 86px;
+        transition: all 0.3s ease-in-out;
+        @include xs {
+          line-height: unset;
+        }
+
+        &:after {
+          line-height: 86px;
+          @include xs {
+            line-height: unset;
+          }
+        }
+      }
+    }
+
+    &.scroll {
+      @include xs {
+        padding: 7px 0;
+      }
+      .nav-li {
+        > .nav-anchor {
+          line-height: 60px;
+          @include xs {
+            line-height: unset;
+          }
+
+          &:after {
+            line-height: 60px;
+
+            @include xs {
+              line-height: unset;
+            }
+          }
+        }
+      }
+
+      .logo {
+        width: 150px;
+        @include xs {
+          width: 120px;
+        }
+      }
+
+      .nav-tgl {
+        top: unset;
+      }
+    }
+  }
+  ._2nd-sec {
+    align-items: center;
+    width: 100%;
+  }
+}
+.mo-navbar {
+  margin-inline-end: 46px;
+  @include md {
+    margin-inline-end: 15px;
+  }
+}
+.nav-anchor {
+  font-family: "taj";
+  font-weight: 500;
+  white-space: nowrap;
+}
+.nav-li {
+  margin: 0;
+  margin-inline-end: 24px;
+  &:last-of-type {
+    margin-inline-end: 0;
+  }
+  @include md {
+    margin-inline-end: 10px;
+  }
+}
+.lang {
+  font-size: 16px;
+  font-weight: 500;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  margin-inline-start: 30px;
+  transition: all 0.3s ease-in-out;
+  @include md {
+    margin-inline-start: 15px;
+  }
+  img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-inline-start: 9px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $orange;
+  }
+  @include sm {
+    position: absolute;
+    top: 17px;
+    margin: 0;
+    inset-inline-start: 18px;
+  }
+}
+.search-cont {
+  width: 100%;
+  @include xs {
+    width: 280px;
+  }
+  .easy-autocomplete {
+    width: 430px !important;
+    max-width: 100% !important;
+    @include md{
+      width: 250px !important;
+    }
+    @include xs{
+      width: 100% !important;
+    }
+  }
+  .search-input {
+    border: 1px solid $border;
+    border-radius: 20px;
+    background-color: $search-back;
+    color: $text;
+    font-size: 16px;
+    text-align: right;
+    width: 100%;
+    height: 40px;
+    padding-right: 45px;
+    padding-left: 20px;
+    box-shadow: none;
+
+    &::placeholder {
+      font-size: 14px;
+      color: $plaeholder;
+    }
+
+    &:focus {
+      border-color: $orange;
+    }
+
+    @include xs {
+      width: 280px;
+    }
+  }
+}

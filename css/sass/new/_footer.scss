@@ -1,0 +1,61 @@
+footer {
+  padding-top: 62px;
+  .logo {
+    width: 201px;
+  }
+  .logo-text {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 12px;
+    @include xs {
+      margin-bottom: 0;
+    }
+  }
+  .download-cont {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    @include xs {
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      max-width: 142px;
+      transition: all 0.3s ease-in-out;
+      ~ a {
+        margin-inline-start: 10px;
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+.foot-header {
+  font-size: 16px;
+  font-family: "taj";
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.nav-foot-link {
+  font-family: "taj";
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.nav-foot-li {
+  margin-bottom: 9px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.arro_top {
+  @include xs {
+    bottom: 20px;
+  }
+}

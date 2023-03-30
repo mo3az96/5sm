@@ -1,0 +1,36 @@
+.breadcrumb-sec {
+  .breadcrumb {
+    margin: 30px 0 40px;
+
+    li {
+      display: flex;
+      align-items: center;
+      a {
+        font-size: 12px;
+        color: #808080;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+
+      &::after {
+        margin-right: 12px;
+        margin-left: 14px;
+        color: #808080;
+        content: "/\00a0";
+        font-size: 12px;
+      }
+
+      &.active {
+        font-size: 12px;
+        color: #808080;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

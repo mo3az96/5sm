@@ -1,252 +1,252 @@
 .search-cont {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 
+  * {
+    @include transition(all 0.3s ease-in-out);
+  }
 
-    * {
-        @include transition(all 0.3s ease-in-out);
-    }
-
-    @include xs {
-        width: 280px;
-        margin: 50px auto;
-    }
+  @include xs {
+    width: 280px;
+    margin: 50px auto;
+  }
 }
 
 .easy-autocomplete {
-    @include xs {
-        width: 100%;
-    }
-
-    .search-input {
-        border: 1px solid $border;
-        border-radius: 20px;
-        background-color: $search-back;
-        color: $text;
-        font-size: 16px;
-        text-align: right;
-        width: 300px;
-        height: 40px;
-        padding-right: 45px;
-        padding-left: 20px;
-        box-shadow: none;
-
-        &::placeholder {
-            font-size: 14px;
-            color: $plaeholder;
-        }
-
-        &:focus {
-            border-color: $orange;
-        }
-
-        @include xs {
-            width: 280px;
-        }
-    }
-}
-
-
-.search-button {
-    color: $place-ion;
-    font-size: 15px;
-    position: absolute;
-    right: 19px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 9;
-
-    &:hover {
-        color: $orange;
-    }
-}
-
-
-.news-letter-cont {
-    background-image: url(../images/newsback.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-    // min-height: 331px;
-    margin-top: 68px;
-    padding-top: 77px;
-    padding-bottom: 75px;
-    position: relative;
-
-    @include xs {
-        margin-top: 40px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    &::before {
-        content: "";
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-    }
-}
-
-.main-newsletter-head {
-    font-size: 36px;
-    font-family: bold;
-    margin-bottom: 20px;
-    position: relative;
-
-    @include xs {
-        font-size: 30px;
-    }
-}
-
-.sub-newsletter-head {
-    font-size: 24px;
-    position: relative;
-
-    @include xs {
-        font-size: 20px;
-    }
-}
-
-.newsletter-form {
-    position: relative;
-    width: 535px;
-    margin: 30px auto 0;
-
-    @include xs {
-        width: 100%;
-    }
-}
-
-.newsletter-input {
+  @include xs {
     width: 100%;
-    height: 58px;
-    border-radius: 30px;
-    background-color: #fff;
-    padding: 0 33px;
-    font-size: 18px;
-    color: $text;
-    @include transition(all 0.3s ease-in-out);
+  }
 
+  .search-input {
+    border: 1px solid $border;
+    border-radius: 20px;
+    background-color: $search-back;
+    color: $text;
+    font-size: 16px;
+    text-align: right;
+    width: 300px;
+    height: 40px;
+    padding-right: 45px;
+    padding-left: 20px;
+    box-shadow: none;
 
     &::placeholder {
-        color: $grey;
+      font-size: 14px;
+      color: $plaeholder;
     }
 
     &:focus {
-        box-shadow: 0px 0px 25px 0px rgba($text, 0.25);
+      border-color: $orange;
     }
+
+    @include xs {
+      width: 280px;
+    }
+  }
+}
+
+.search-button {
+  color: $place-ion;
+  font-size: 15px;
+  position: absolute;
+  right: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.news-letter-cont {
+  background-image: url(../images/newsback.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  // min-height: 331px;
+  margin-top: 68px;
+  padding-top: 77px;
+  padding-bottom: 75px;
+  position: relative;
+
+  @include xs {
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &::before {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.main-newsletter-head {
+  font-size: 36px;
+  font-family: bold;
+  margin-bottom: 20px;
+  position: relative;
+
+  @include xs {
+    font-size: 30px;
+  }
+}
+
+.sub-newsletter-head {
+  font-size: 24px;
+  position: relative;
+
+  @include xs {
+    font-size: 20px;
+  }
+}
+
+.newsletter-form {
+  position: relative;
+  width: 535px;
+  margin: 30px auto 0;
+
+  @include xs {
+    width: 100%;
+  }
+}
+
+.newsletter-input {
+  width: 100%;
+  height: 58px;
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 0 33px;
+  font-size: 18px;
+  color: $text;
+  @include transition(all 0.3s ease-in-out);
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 25px 0px rgba($text, 0.25);
+  }
 }
 
 .newsletter-button {
-    position: absolute;
-    padding: 0 30px;
-    height: 46px;
-    border-radius: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 6px;
-    font-size: 18px;
-    font-family: bold;
-    color: #fff;
-    background-color: $orange;
-    @include transition(all 0.3s ease-in-out);
+  position: absolute;
+  padding: 0 30px;
+  height: 46px;
+  border-radius: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6px;
+  font-size: 18px;
+  font-family: bold;
+  color: #fff;
+  background-color: $orange;
+  @include transition(all 0.3s ease-in-out);
 
-    &:hover {
-        background-color: $secorange;
+  &:hover {
+    background-color: $secorange;
+  }
+
+  @include xs {
+    padding: 0;
+    width: 46px;
+
+    span {
+      display: none;
     }
 
-    @include xs {
-        padding: 0;
-        width: 46px;
-
-        span {
-            display: none;
-        }
-
-        &:after {
-            content: "\f060";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-        }
+    &:after {
+      content: "\f060";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
     }
+  }
 }
 
 .newlleter-page {
-    background-color: $text;
-    padding: 30px 22px;
-    margin-top: 32px;
+  background-color: $text;
+  padding: 30px 22px;
+  margin-top: 32px;
+
+  @include xs {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+
+    .newsletter-input {
+      height: 41px;
+      font-size: 12px;
+      padding: 0 25px;
+    }
+
+    .newsletter-button {
+      width: 105px;
+      height: 32px;
+      font-size: 12px;
+      padding: 0;
+
+      @include xs {
+        width: 32px;
+      }
+    }
+  }
+
+  .main-newsletter-head {
+    color: #fff;
+    font-size: 19px;
+    font-family: bold;
 
     @include xs {
-        padding: 15px;
-        margin-top: 15px;
+      text-align: center;
     }
-
-    .newsletter-form {
-        width: 100%;
-
-        .newsletter-input {
-            height: 41px;
-            font-size: 12px;
-            padding: 0 25px;
-        }
-
-        .newsletter-button {
-            width: 105px;
-            height: 32px;
-            font-size: 12px;
-            padding: 0;
-
-            @include xs {
-                width: 32px;
-            }
-        }
-    }
-
-    .main-newsletter-head {
-        color: #fff;
-        font-size: 19px;
-        font-family: bold;
-
-        @include xs {
-            text-align: center;
-        }
-    }
+  }
 }
 
 .easy-autocomplete-container ul {
-    padding: 0;
+  padding: 0;
 }
 
 .easy-autocomplete-container ul li,
 .easy-autocomplete-container ul .eac-category {
-    color: $text;
-    font-size: 16px;
-    border-color: transparent;
+  color: $text;
+  font-size: 16px;
+  border-color: transparent;
 
-    b {
-        transition: none;
-    }
+  b {
+    transition: none;
+  }
 }
 
 .easy-autocomplete-container ul li:hover,
 .easy-autocomplete-container ul li.selected,
 .easy-autocomplete-container ul .eac-category:hover {
-    background-color: $back;
-    color: $orange;
+  background-color: $back;
+  color: $orange;
 }
 
 .easy-autocomplete-container ul {
-    border: none;
-    box-sizing: 5px;
+  border: none;
+  box-sizing: 5px;
 }
 
 .search-img {
-    height: 50px;
-    margin-left: 20px;
+  height: 50px;
+  margin-left: 20px;
 }
