@@ -1,354 +1,350 @@
 .cop-div {
-    width: 100%;
-    border: 1px solid $border;
-    padding: 0 8px;
-    padding-top: 19px;
-    margin-bottom: 30px;
+  width: 100%;
+  border: 1px solid $border;
+  padding: 0 8px;
+  padding-top: 19px;
+  margin-bottom: 30px;
+
+  @include xs {
+    margin-bottom: 15px;
+  }
+
+  @include transition(all 0.3s ease-in-out);
+
+  &:hover {
+    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  * {
+    @include transition(all 0.3s ease-in-out);
+  }
+
+  .cop-div-head {
+    padding: 0 10px;
+    display: flex;
 
     @include xs {
-        margin-bottom: 15px;
+      padding: 0 0px;
     }
+  }
 
-    @include transition(all 0.3s ease-in-out);
-
-    &:hover {
-        box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
-    }
-
-    * {
-        @include transition(all 0.3s ease-in-out);
-    }
-
-    .cop-div-head {
-        padding: 0 10px;
-        display: flex;
-
-        @include xs {
-            padding: 0 0px;
-        }
-    }
-
-    .store {
-        width: 86px;
-        height: 86px;
-        margin: 0;
-        margin-left: 14px;
-
-        @include xs {
-            margin-left: 7px;
-        }
-    }
-
-    .left-div {
-        flex: 1;
-    }
-
-    .right {
-        flex: 1;
-        display: flex;
-        justify-content: space-between;
-
-        .code {
-            width: 219px;
-        }
-
-        @include xs {
-            flex-direction: column;
-        }
-    }
-
-    .line {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-right: 10px;
-
-        @include xs {
-            padding: 0;
-        }
-    }
-
-    .value {
-        font-size: 17px;
-        color: $text;
-        font-family: bold;
-    }
-
-    .tags {
-        display: flex;
-        align-items: center;
-    }
-
-    .tag {
-        font-size: 13px;
-        color: #fff;
-        font-family: med;
-        height: 20px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        padding: 0 9px;
-
-        &.valide-tag {
-            background-color: $green;
-            margin-right: 5px;
-
-            &::before {
-                content: "\f058";
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                font-size: 11px;
-                margin-left: 4px;
-            }
-        }
-
-        &.code-tag {
-            background-color: $code;
-        }
-
-        &.sale-tag {
-            background-color: $red;
-        }
-    }
-
-
-    .cop-div-desc {
-        padding: 0 10px;
-        font-size: 17px;
-        color: $text;
-        margin: 15px 0;
-    }
-
-    .cop-div-foot {
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-top: 1px solid #ededed;
-
-        @include xs {
-            height: auto;
-            padding: 15px 0;
-        }
-    }
-
-    .cop-div-link {
-        color: $grey;
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        margin: 0 6px;
-
-        i {
-            font-size: 15px;
-            margin-left: 6px;
-            transition: none;
-        }
-
-        &:hover {
-            color: $text;
-        }
-    }
-
-    .left-foot {
-        @include xs {
-            margin-top: 15px;
-        }
-
-        span {
-            font-size: 13px;
-            color: $grey;
-            cursor: pointer;
-
-            &:hover {
-                color: $text;
-            }
-
-            &.hide-text {
-                display: none;
-            }
-
-            &::after {
-                content: "\f078";
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                font-size: 15px;
-                margin-right: 8px;
-            }
-        }
-
-        &.active {
-            span {
-                display: none;
-
-                &.hide-text {
-                    display: block;
-
-                    &::after {
-                        content: "\f077";
-                    }
-                }
-            }
-        }
-    }
-}
-
-.code {
-    height: 36px;
-    border: 1px dashed $secorange;
-    display: flex;
-    border-radius: 18px;
-    align-items: center;
-    padding: 0 28px;
-    margin-top: 14px;
-    font-size: 17px;
-    color: $text;
-    position: relative;
-    @include transition(all 0.3s ease-in-out);
-
-    .code-cover {
-        position: absolute;
-        left: -1px;
-        background-color: $orange;
-        top: -1px;
-        bottom: -1px;
-        border-radius: 20px;
-        width: 70%;
-        display: flex;
-        align-items: center;
-        padding-right: 29px;
-        font-size: 16px;
-        color: #fff;
-        font-family: bold;
-        @include transition(all 0.3s ease-in-out);
-    }
-
-    &:hover {
-        border-color: $orange;
-
-        .code-cover {
-            background-color: $secorange;
-        }
-
-        .mo-tool-tip {
-            transform: translateX(-50%) translateY(-5px);
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-
-    .mo-tool-tip {
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform: translateX(-50%) translateY(25px);
-        font-size: 12px;
-        font-family: med;
-        color: #fff;
-        width: 164px;
-        background-color: rgba(0, 0, 0, 0.8);
-        height: 24px;
-        border-radius: 12px;
-        text-align: center;
-        line-height: 24px;
-        visibility: hidden;
-        @include transition(all 0.3s ease-in-out);
-        opacity: 0;
-
-        &:after {
-            position: absolute;
-            content: "";
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 15px;
-            color: rgba(0, 0, 0, 0.8);
-            border: solid transparent;
-            position: absolute;
-            pointer-events: none;
-            border-color: rgba(239, 108, 0, 0);
-            border-top-color: rgba(0, 0, 0, 0.8);
-            border-width: 5px;
-        }
-    }
-
-    &.show-offer {
-        background-color: $orange;
-        font-size: 16px;
-        color: #fff;
-        font-family: bold;
-        border: none;
-        width: 171px;
-        margin-right: auto;
-
-        &:hover {
-            background-color: $secorange;
-        }
-    }
-
-    &.show-buy {
-        background-color: $green;
-        font-size: 16px;
-        color: #fff;
-        font-family: bold;
-        border: none;
-        width: 204px;
-        margin-right: auto;
-
-        &:hover {
-            background-color: $orange;
-        }
-    }
-
-}
-
-.react-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .store {
+    width: 86px;
+    height: 86px;
+    margin: 0;
     margin-left: 14px;
-    margin-top: 10px;
-
-    .react {
-        margin: 0 6px;
-        font-size: 15px;
-        color: $grey;
-        transition: 0;
-
-        &:hover {
-            color: $orange;
-        }
-    }
-}
-
-
-.cop-details {
-    padding: 20px 30px;
-    border-top: 1px solid $border;
-    margin: 0 -9px;
-    transition: none;
-    display: none;
 
     @include xs {
-        padding: 20px 15px;
+      margin-left: 7px;
     }
-}
+  }
 
-.details-head {
+  .left-div {
+    flex: 1;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+
+    .code {
+      width: 219px;
+    }
+
+    @include xs {
+      flex-direction: column;
+    }
+  }
+
+  .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+
+    @include xs {
+      padding: 0;
+    }
+  }
+
+  .value {
     font-size: 17px;
     color: $text;
     font-family: bold;
+  }
+
+  .tags {
+    display: flex;
+    align-items: center;
+  }
+
+  .tag {
+    font-size: 13px;
+    color: #fff;
+    font-family: med;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0 9px;
+
+    &.valide-tag {
+      background-color: $green;
+      margin-right: 5px;
+
+      &::before {
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 11px;
+        margin-left: 4px;
+      }
+    }
+
+    &.code-tag {
+      background-color: $code;
+    }
+
+    &.sale-tag {
+      background-color: $red;
+    }
+  }
+
+  .cop-div-desc {
+    padding: 0 10px;
+    font-size: 17px;
+    color: $text;
+    margin: 15px 0;
+  }
+
+  .cop-div-foot {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #ededed;
+
+    @include xs {
+      height: auto;
+      padding: 15px 0;
+    }
+  }
+
+  .cop-div-link {
+    color: $grey;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin: 0 6px;
+
+    i {
+      font-size: 15px;
+      margin-left: 6px;
+      transition: none;
+    }
+
+    &:hover {
+      color: $text;
+    }
+  }
+
+  .left-foot {
+    @include xs {
+      margin-top: 15px;
+    }
+
+    span {
+      font-size: 13px;
+      color: $grey;
+      cursor: pointer;
+
+      &:hover {
+        color: $text;
+      }
+
+      &.hide-text {
+        display: none;
+      }
+
+      &::after {
+        content: "\f078";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 15px;
+        margin-right: 8px;
+      }
+    }
+
+    &.active {
+      span {
+        display: none;
+
+        &.hide-text {
+          display: block;
+
+          &::after {
+            content: "\f077";
+          }
+        }
+      }
+    }
+  }
+}
+
+.code {
+  height: 36px;
+  border: 1px dashed $secorange;
+  display: flex;
+  border-radius: 18px;
+  align-items: center;
+  padding: 0 28px;
+  margin-top: 14px;
+  font-size: 17px;
+  color: $text;
+  position: relative;
+  @include transition(all 0.3s ease-in-out);
+
+  .code-cover {
+    position: absolute;
+    left: -1px;
+    background-color: $orange;
+    top: -1px;
+    bottom: -1px;
+    border-radius: 20px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding-right: 29px;
+    font-size: 16px;
+    color: #fff;
+    font-family: bold;
+    @include transition(all 0.3s ease-in-out);
+  }
+
+  &:hover {
+    border-color: $orange;
+
+    .code-cover {
+      background-color: $secorange;
+    }
+
+    .mo-tool-tip {
+      transform: translateX(-50%) translateY(-5px);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .mo-tool-tip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(25px);
+    font-size: 12px;
+    font-family: med;
+    color: #fff;
+    width: 164px;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 24px;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 24px;
+    visibility: hidden;
+    @include transition(all 0.3s ease-in-out);
+    opacity: 0;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.8);
+      border: solid transparent;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(239, 108, 0, 0);
+      border-top-color: rgba(0, 0, 0, 0.8);
+      border-width: 5px;
+    }
+  }
+
+  &.show-offer {
+    background-color: $orange;
+    font-size: 16px;
+    color: #fff;
+    font-family: bold;
+    border: none;
+    width: 171px;
+    margin-right: auto;
+
+    &:hover {
+      background-color: $secorange;
+    }
+  }
+
+  &.show-buy {
+    background-color: $green;
+    font-size: 16px;
+    color: #fff;
+    font-family: bold;
+    border: none;
+    width: 204px;
+    margin-right: auto;
+
+    &:hover {
+      background-color: $orange;
+    }
+  }
+}
+
+.react-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 14px;
+  margin-top: 10px;
+
+  .react {
+    margin: 0 6px;
+    font-size: 15px;
+    color: $grey;
+    transition: 0;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.cop-details {
+  padding: 20px 30px;
+  border-top: 1px solid $border;
+  margin: 0 -9px;
+  transition: none;
+  display: none;
+
+  @include xs {
+    padding: 20px 15px;
+  }
+}
+
+.details-head {
+  font-size: 17px;
+  color: $text;
+  font-family: bold;
 }
 
 .details-text {
-    font-size: 17px;
-    color: $text;
-    margin-top: 15px;
-    text-align: justify;
+  font-size: 17px;
+  color: $text;
+  margin-top: 15px;
+  text-align: justify;
 
-    &::before {
-        content: "-";
-    }
-
+  &::before {
+    content: "-";
+  }
 }

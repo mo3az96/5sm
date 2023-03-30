@@ -1,0 +1,167 @@
+.offers-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  img {
+    width: 100%;
+  }
+  @include xs {
+    top: 60px;
+  }
+}
+
+.offers-sec {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0 50px;
+  @include xs {
+    padding: 60px 0 30px;
+  }
+}
+.sec-header {
+  font-size: 24px;
+  font-weight: 700;
+  color: $text;
+  margin-bottom: 40px;
+}
+
+.cop-div {
+  border-radius: 15px;
+  .cop-div-head {
+    padding: 0 11px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    @include xs {
+      padding: 0 0px;
+    }
+  }
+  .store {
+    flex-shrink: 0;
+    margin: 0;
+    border: 1px solid #ededed;
+    margin-inline-end: 25px;
+
+    @include xs {
+      margin-inline-end: 15px;
+    }
+  }
+  .left-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: unset;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+  .line {
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .value {
+    font-size: 18px;
+    color: $text;
+    font-family: "taj";
+    font-weight: 700;
+    &:hover {
+      color: $orange;
+    }
+  }
+  .tags {
+    margin-top: 5px;
+  }
+  .tag {
+    font-family: "taj";
+    font-weight: 500;
+
+    &.valide-tag {
+      margin: 0;
+    }
+    ~ .tag {
+      margin-inline-start: 5px;
+    }
+  }
+  .code {
+    width: 100%;
+    margin: 14px 0 0;
+    margin-inline-end: 4px;
+    &:hover {
+      color: $text;
+    }
+    &.show-offer {
+      justify-content: center;
+      font-family: "taj";
+      font-weight: 700;
+      &:hover {
+        color: #fff;
+      }
+    }
+    .code-cover {
+      padding: 0;
+      justify-content: center;
+      font-family: "taj";
+      font-weight: 700;
+    }
+  }
+  .cop-div-desc {
+    padding: 0 16px;
+    margin: 0 0 17px;
+    font-size: 16px;
+    color: #4d4d4d;
+    font-family: "taj";
+    line-height: 1.5;
+  }
+}
+
+.offers-desc-sec {
+  padding: 50px 0 80px;
+  @include xs {
+    padding: 30px 0 50px;
+  }
+}
+
+.offers-desc-cont {
+  color: $text !important;
+  font-family: "taj" !important;
+  line-height: 1.667 !important;
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0 0 30px;
+    @include xs {
+      font-size: 30px;
+      margin: 0 0 20px;
+    }
+  }
+  h5 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 30px;
+    @include xs {
+      font-size: 20px;
+      margin: 0 0 20px;
+    }
+  }
+  p {
+    font-size: 18px;
+    margin: 0 0 37px;
+    @include xs {
+      font-size: 14px;
+      margin: 0 0 25px;
+    }
+  }
+  img {
+    max-width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 0 45px;
+    @include xs {
+      margin: 0 0 30px;
+    }
+  }
+}
