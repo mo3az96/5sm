@@ -109,6 +109,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
     }
   }
   .item-cat {
@@ -175,6 +177,12 @@
       }
     }
   }
+
+  &:hover {
+    img {
+      transform: scale(1);
+    }
+  }
 }
 .blog-mixItUp-sec {
   padding: 50px 0 120px;
@@ -222,7 +230,11 @@
     white-space: nowrap;
     transition: all 0.3s ease-in-out;
     margin-inline-end: 5px;
-
+    &:hover {
+      border-color: $orange;
+      background-color: $orange;
+      color: #fff;
+    }
     &.mixitup-control-active {
       border-color: $orange;
       background-color: #fff;
@@ -266,6 +278,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transform: scale(1);
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
     }
   }
   .cat-item {

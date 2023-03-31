@@ -230,7 +230,7 @@ header ._2nd-sec {
   }
 }
 .search-cont .easy-autocomplete {
-  width: 430px !important;
+  width: 100% !important;
   max-width: 100% !important;
 }
 @media (max-width: 1199px) {
@@ -275,6 +275,11 @@ header ._2nd-sec {
 
 footer {
   padding-top: 62px;
+}
+@media (max-width: 992px) {
+  footer {
+    padding-bottom: 20px;
+  }
 }
 footer .logo {
   width: 201px;
@@ -334,9 +339,17 @@ footer .download-cont a:hover {
   margin-bottom: 0;
 }
 
+.arro_top {
+  width: 40px;
+  height: 40px;
+  line-height: 44px;
+  font-size: 14px;
+  bottom: 10px;
+  inset-inline-start: 10px;
+}
 @media (max-width: 992px) {
   .arro_top {
-    bottom: 20px;
+    bottom: 10px;
   }
 }
 
@@ -488,6 +501,8 @@ footer .download-cont a:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 .main-blog-item .item-cat {
   height: 24px;
@@ -557,6 +572,9 @@ footer .download-cont a:hover {
     height: 48px;
   }
 }
+.main-blog-item:hover img {
+  transform: scale(1);
+}
 
 .blog-mixItUp-sec {
   padding: 50px 0 120px;
@@ -610,6 +628,11 @@ footer .download-cont a:hover {
   -webkit-margin-end: 5px;
           margin-inline-end: 5px;
 }
+.blog-mixItUp-btns button:hover {
+  border-color: #ffad35;
+  background-color: #ffad35;
+  color: #fff;
+}
 .blog-mixItUp-btns button.mixitup-control-active {
   border-color: #ffad35;
   background-color: #fff;
@@ -661,6 +684,11 @@ footer .download-cont a:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.blog-item .item-img:hover img {
+  transform: scale(1.05);
 }
 .blog-item .cat-item {
   height: 24px;
@@ -1287,6 +1315,10 @@ footer .download-cont a:hover {
   .post-page {
     padding: 40px 0 85px;
   }
+}
+
+.preloader {
+  display: none;
 }
 
 @media (max-width: 992px) {
