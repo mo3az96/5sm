@@ -1156,6 +1156,9 @@ footer .download-cont a:hover {
   .desc-coupones {
     grid-template-columns: 1fr;
     gap: 15px;
+    width: 100%;
+    max-width: 296px;
+    margin: auto;
   }
 }
 .desc-coupones .cop-div {

@@ -240,6 +240,9 @@
   @include xs {
     grid-template-columns: 1fr;
     gap: 15px;
+    width: 100%;
+    max-width: 296px;
+    margin: auto;
   }
   .cop-div {
     background-color: #4d4d4d;
