@@ -30,6 +30,11 @@
 
 .cop-div {
   border-radius: 15px;
+  @include xs {
+    width: 100%;
+    max-width: 350px;
+    margin-inline: auto;
+  }
   .cop-div-head {
     padding: 0 11px;
     align-items: flex-start;
