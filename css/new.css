@@ -43,6 +43,7 @@
 }
 body {
   font-family: "taj";
+  overflow: unset;
 }
 
 * {
@@ -501,7 +502,6 @@ footer .download-cont a:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
 .main-blog-item .item-cat {
@@ -573,7 +573,7 @@ footer .download-cont a:hover {
   }
 }
 .main-blog-item:hover img {
-  transform: scale(1);
+  transform: scale(1.05);
 }
 
 .blog-mixItUp-sec {
@@ -1359,6 +1359,7 @@ footer .download-cont a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px 31px;
+  overflow: hidden;
 }
 @media (max-width: 992px) {
   .article-items {

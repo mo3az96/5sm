@@ -51,6 +51,7 @@
 @import "sass/helpers/mixins";
 body {
   font-family: "taj";
+  overflow: unset;
 }
 * {
   outline: none !important;

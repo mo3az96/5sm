@@ -38,6 +38,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px 31px;
+  overflow: hidden;
   @include xs {
     gap: 15px;
   }
