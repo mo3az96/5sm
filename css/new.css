@@ -767,6 +767,12 @@ footer .download-cont a:hover {
   color: #4d4d4d;
   margin-bottom: 40px;
 }
+@media (max-width: 992px) {
+  .sec-header {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+}
 
 .cop-div {
   border-radius: 15px;
@@ -1193,7 +1199,7 @@ footer .download-cont a:hover {
     gap: 15px;
     width: 100%;
     max-width: 296px;
-    margin: auto;
+    margin: 0 auto 35px;
   }
 }
 .desc-coupones .cop-div {

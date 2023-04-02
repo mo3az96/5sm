@@ -26,6 +26,10 @@
   font-weight: 700;
   color: $text;
   margin-bottom: 40px;
+  @include xs {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
 }
 
 .cop-div {
