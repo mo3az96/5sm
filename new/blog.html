@@ -650,12 +650,12 @@
     <script>
       $(".blog-mixItUp-btns button").on("click", function (e) {
         var ele = $(this).offset().left - $(this).width();
-        if (ele < 0) {
-          var x = $("#cats-btns").scrollLeft() - $(this).width();
-          $("#cats-btns").scrollLeft(x);
-        } else if (ele > $("#cats-btns").width()) {
+        if (ele > $("#cats-btns").width()) {
           var x = -($("#cats-btns").scrollLeft() + $(this).width());
           console.log(x);
+          $("#cats-btns").scrollLeft(x);
+        } else if ($(this).scrollLeft() - $(this).width() < 0) {
+          var x = $("#cats-btns").scrollLeft() - $(this).width();
           $("#cats-btns").scrollLeft(x);
         }
       });
