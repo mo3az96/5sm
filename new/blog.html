@@ -276,7 +276,7 @@
             <button type="button" data-filter=".cat-6">الالعاب</button>
             <button type="button" data-filter=".cat-7">العطور</button>
             <button type="button" data-filter=".cat-8">تعليم</button>
-            <button type="button" data-filter=".cat-9">
+            <button type="button" data-filter=".cat-9" id="last-btn">
               دومينات واستضافة مواقع
             </button>
           </div>
@@ -648,7 +648,17 @@
     <script src="../js/main.js"></script>
 
     <script>
-      
+      $(".blog-mixItUp-btns button").on("click", function (e) {
+        var ele = $(this).offset().left - $(this).width();
+        if (ele < 0) {
+          var x = $("#cats-btns").scrollLeft() - $(this).width();
+          $("#cats-btns").scrollLeft(x);
+        } else if (ele > $("#cats-btns").width()) {
+          var x = -($("#cats-btns").scrollLeft() + $(this).width());
+          console.log(x);
+          $("#cats-btns").scrollLeft(x);
+        }
+      });
       if ($(window).width() >= 991) {
         var clicked = false,
           clickX;

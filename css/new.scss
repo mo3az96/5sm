@@ -56,6 +56,11 @@ body {
 * {
   outline: none !important;
 }
+.container {
+  @include lg {
+    max-width: 1170px;
+  }
+}
 @import "sass/new/header";
 @import "sass/new/footer";
 @import "sass/new/bread";

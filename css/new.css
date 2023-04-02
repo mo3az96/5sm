@@ -50,6 +50,12 @@ body {
   outline: none !important;
 }
 
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
 /*////////////////////// New Header //////////////////////*/
 header {
   height: 86px;
