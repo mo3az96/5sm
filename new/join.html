@@ -310,7 +310,7 @@
             </div>
             <div class="state-item">
               <div class="state-value">
-                <span class="count" data-count="01.07">01.07</span>
+                <span class="count" data-count="01:07">01.07</span>
               </div>
               <h6 class="state-title">معدل بقاء الزائر في الموقع بالدقيقة</h6>
             </div>
@@ -1052,7 +1052,7 @@
 
       var a = 0;
       $(window).scroll(function () {
-        if (a == 0 && $(this).scrollTop() >= $("#counter").offset().top - 500) {
+        if (a == 0 && $(this).scrollTop() >= $("#counter").offset().top - 750) {
           $(".count").each(function () {
             $(this)
               .prop("Counter", 0)
@@ -1076,7 +1076,7 @@
           a++;
         }
         $(".progress-bar").each(function () {
-          if ($(window).scrollTop() >= $(this).offset().top - 500) {
+          if ($(window).scrollTop() >= $(this).offset().top - 750) {
             if ($(this).width() == 0) {
               $(this).width($(this).data("width") + "%");
               if ($(this).data("width") >= 9) {
@@ -1085,7 +1085,7 @@
 
               setTimeout(() => {
                 console.log($(this).find(".prog-val").addClass("show"));
-              }, 500);
+              }, 350);
             }
           }
         });
